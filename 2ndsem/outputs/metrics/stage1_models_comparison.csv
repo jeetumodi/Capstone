@@ -1,0 +1,15 @@
+Sensor_Target,Model,R2_Score,RMSE,MAE,MAPE_%
+Er_ohm-cm,Ridge,0.8409,1.2299,0.953,14.95
+Er_ohm-cm,RandomForest,0.9822,0.4111,0.25,3.88
+Er_ohm-cm,ExtraTrees,0.9822,0.411,0.25,3.88
+Er_ohm-cm,GradientBoosting,0.9822,0.411,0.2501,3.88
+Er_ohm-cm,XGBoost,0.9822,0.4111,0.2502,3.88
+Er_ohm-cm,LightGBM,0.9822,0.411,0.2501,3.88
+Er_ohm-cm,VotingEnsemble,0.9822,0.411,0.2501,3.88
+UPV_m/s,Ridge,0.938,142.8632,107.072,3.09
+UPV_m/s,RandomForest,0.9825,75.897,45.2771,1.34
+UPV_m/s,ExtraTrees,0.9825,75.8955,45.2891,1.34
+UPV_m/s,GradientBoosting,0.9825,75.8966,45.2902,1.34
+UPV_m/s,XGBoost,0.9825,75.9536,45.2821,1.34
+UPV_m/s,LightGBM,0.9825,75.9023,45.2867,1.34
+UPV_m/s,VotingEnsemble,0.9825,75.9113,45.2833,1.34

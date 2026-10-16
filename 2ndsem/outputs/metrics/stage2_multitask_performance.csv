@@ -1,0 +1,4 @@
+Target,R2_Score,RMSE_MPa,MAE_MPa
+Cs_Mpa,0.99,0.965,0.649
+Ts_Mpa,0.9187,0.257,0.214
+Fs_Mpa,0.9721,0.389,0.35

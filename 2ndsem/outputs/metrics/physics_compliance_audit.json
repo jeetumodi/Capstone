@@ -1,0 +1,10 @@
+{
+    "Constraint_1": {
+        "Description": "Flexural strength <= 35% Compressive strength (Fs <= 0.35 Cs)",
+        "Compliance_Percent": 100.0
+    },
+    "Constraint_2": {
+        "Description": "Tensile strength <= Flexural strength (Ts <= Fs)",
+        "Compliance_Percent": 82.81
+    }
+}

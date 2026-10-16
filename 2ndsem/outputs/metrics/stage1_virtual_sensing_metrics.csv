@@ -1,0 +1,3 @@
+Target,Champion_Model,R2_Score,RMSE,MAE
+Er_ohm-cm,ExtraTrees,0.9822,0.411,0.25
+UPV_m/s,ExtraTrees,0.9825,75.8955,45.2891
