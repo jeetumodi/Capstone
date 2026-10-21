@@ -1,0 +1,21 @@
+======================================================================
+      PIM-MTL CONCRETE STRENGTH PREDICTION PIPELINE RESULTS
+======================================================================
+
+Total Test Specimens: 884
+Compute Device      : cuda:0
+
+--- Quantitative Accuracy Metrics ---
+Target     | Observed N | Coverage   | R2 Score   | RMSE (MPa)   | MAE (MPa) 
+----------------------------------------------------------------------
+Cs_Mpa     | 884        |    100.0% |    0.9812  |     1.3353   |   1.0183
+Ts_Mpa     | 696        |     78.7% |    0.9867  |     0.1060   |   0.0761
+Fs_Mpa     | 363        |     41.1% |    0.9982  |     0.1024   |   0.0755
+----------------------------------------------------------------------
+
+--- Physical Feasibility Audit ---
+Tensile Ratio Violations (Rt outside [0.06, 0.18])  : 3.17%
+Flexural Ratio Violations (Rf outside [0.08, 0.25]) : 17.76%
+Physically Impossible Predictions (Ts >= Cs)        : 0.00%
+
+======================================================================
