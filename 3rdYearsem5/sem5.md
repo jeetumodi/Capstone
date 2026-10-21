@@ -101,10 +101,10 @@ All preprocessing is fitted strictly on the 80% training split (3,536 samples) t
 ### 3.1 Feature Space (19 Dimensions Total)
 
 1. **Categorical Features (4 inputs $\rightarrow$ 15 one-hot binary dimensions):**
-   - `Type_of_cement` (4 levels: CPC 30R, CPO 30R RS BRA, CPC 30R RS, CPC 40R)
+   - ``Type_of_cement` (4 levels: CPC 30R, CPO 30R RS BRA, CPC 30R RS, CPC 40R)
    - `Brand` (2 levels: CEMEX, Apasco)
    - `Additives` (5 levels: None, Opuntia biopolymer, Slag, Fluidizers)
-   - `Type_of_aggregates` (4 levels: Crushed, Rounded gravel, Recycled, Volcanic)
+   - ``Type_of_aggregates` (4 levels: Crushed, Rounded gravel, Recycled, Volcanic)
 
 $$
 \mathbf{x}_{\text{cat}} = \text{OneHotEncoder}(\text{sparse}=\text{False}, \text{handle\_unknown}=\text{"ignore"})
@@ -341,134 +341,6 @@ where $\mathcal{J}^+ = \max_k \mathcal{J}_k$, $\Phi(\cdot)$ is the standard norm
 | Hidden Layer 1 ($d_1$) | Integer | $[64, 256]$ (step 32) | Discrete Grid |
 | Hidden Layer 2 ($d_2$) | Integer | $[32, 128]$ (step 16) | Discrete Grid |
 | Hidden Layer 3 ($d_3$) | Integer | $[16, 64]$ (step 8) | Discrete Grid |
-
----
-
-### Future Work 2: Deep Residual Tabular Encoders (TabResNet & Cross-Stitch MTL)
-
-As concrete datasets scale to include microstructural chemical assays (XRF mineralogy, OPC clinker ratios, silica fume percentages), deeper representations are needed.
-
-#### 1. Residual Tabular MLP (TabResNet)
-
-To prevent gradient vanishing across deeper networks, implement residual connections with pre-activation layer normalization:
-
-$$
-\mathbf{x}_{l+1} = \mathbf{x}_l + \mathbf{W}_{l,2} \cdot \text{GELU}\Big( \text{LayerNorm}\big(\mathbf{W}_{l,1} \mathbf{x}_l + \mathbf{b}_{l,1}\big) \Big) + \mathbf{b}_{l,2}
-$$
-
-#### 2. Cross-Stitch Multi-Task Network
-
-Rather than hard parameter sharing at layer 3, employ learnable linear cross-stitch units $\mathbf{A} \in \mathbb{R}^{3 \times 3}$ that dynamically learn task feature sharing:
-
-$$
-\begin{bmatrix} \mathbf{h}_{l, Cs} \\ \mathbf{h}_{l, Ts} \\ \mathbf{h}_{l, Fs} \end{bmatrix} = \begin{bmatrix} \alpha_{11} & \alpha_{12} & \alpha_{13} \\ \alpha_{21} & \alpha_{22} & \alpha_{23} \\ \alpha_{31} & \alpha_{32} & \alpha_{33} \end{bmatrix} \begin{bmatrix} \mathbf{f}_{Cs}(\mathbf{h}_{l-1, Cs}) \\ \mathbf{f}_{Ts}(\mathbf{h}_{l-1, Ts}) \\ \mathbf{f}_{Fs}(\mathbf{h}_{l-1, Fs}) \end{bmatrix}
-$$
-
-where $\sum_k \alpha_{jk} = 1$. The network autonomously discovers how much microstructural information to share between compression and bending.
-
----
-
-### Future Work 3: Adaptive Multi-Task Loss Weighting (GradNorm & Uncertainty Weighting)
-
-Manual task weighting ($w = [1.0, 1.2, 1.5]$) can be replaced by dynamic gradient balancing.
-
-#### 1. GradNorm Algorithm
-
-GradNorm balances the training pace of each task by penalizing discrepancies in gradient norms:
-
-$$
-G_j(t) = \|\nabla_{\mathbf{W}_{\text{shared}}} w_j(t) \mathcal{L}_j(t)\|_2
-$$
-
-$$
-\bar{G}(t) = \frac{1}{3} \sum_{j=1}^3 G_j(t)
-$$
-
-Define relative inverse training pace:
-
-$$
-r_j(t) = \frac{\tilde{\mathcal{L}}_j(t)}{\frac{1}{3}\sum_k \tilde{\mathcal{L}}_k(t)}, \quad \text{where } \tilde{\mathcal{L}}_j(t) = \frac{\mathcal{L}_j(t)}{\mathcal{L}_j(0)}
-$$
-
-The task weight loss is:
-
-$$
-\mathcal{L}_{\text{grad}}(w_1, w_2, w_3) = \sum_{j=1}^3 \left| G_j(t) - \bar{G}(t) \cdot \left[r_j(t)\right]^\alpha \right|_1
-$$
-
-#### 2. Homoscedastic Uncertainty Weighting (Kendall & Gal)
-
-Model aleatoric uncertainty by predicting task log-variances $s_j = \log \sigma_j^2$:
-
-$$
-\mathcal{L}_{\text{data}}(\mathbf{W}, s_1, s_2, s_3) = \sum_{j=1}^3 \left[ \frac{1}{2 \exp(s_j)} \text{task\_mse}_j + \frac{1}{2} s_j \right]
-$$
-
-Tasks with high missingness ($F_s$) automatically self-calibrate their loss weighting without manual tuning.
-
----
-
-### Future Work 4: Self-Adaptive Physics Penalty via Augmented Lagrangian Multipliers
-
-Currently, $\lambda_{\text{phys}} = 0.5$ is a static penalty coefficient. For strict constraint satisfaction ($\text{PVR} \rightarrow 0.00\%$), implement an **Augmented Lagrangian System**:
-
-$$
-\mathcal{L}_{\text{ALM}}(\mathbf{W}, \boldsymbol{\lambda}, \rho) = \mathcal{L}_{\text{data}}(\mathbf{W}) + \sum_{k=1}^4 \left[ \lambda_k c_k(\hat{\mathbf{y}}) + \frac{\rho}{2} c_k(\hat{\mathbf{y}})^2 \right]
-$$
-
-where the constraint violations are:
-
-$$
-c_1(\hat{\mathbf{y}}) = \max(0, R_t - 0.18), \quad c_2(\hat{\mathbf{y}}) = \max(0, 0.06 - R_t)
-$$
-
-$$
-c_3(\hat{\mathbf{y}}) = \max(0, R_f - 0.25), \quad c_4(\hat{\mathbf{y}}) = \max(0, 0.08 - R_f)
-$$
-
-Multiplier and penalty parameter updates at epoch $e$:
-
-$$
-\lambda_k^{(e+1)} = \lambda_k^{(e)} + \rho^{(e)} c_k(\hat{\mathbf{y}})
-$$
-
-$$
-\rho^{(e+1)} = \begin{cases} \beta \rho^{(e)}, & \text{if } \|c(\hat{\mathbf{y}}^{(e)})\|_\infty > \tau \|c(\hat{\mathbf{y}}^{(e-1)})\|_\infty \quad (\beta \approx 1.2) \\ \rho^{(e)}, & \text{otherwise} \end{cases}
-$$
-
-This mathematically guarantees convergence to the exact physical boundary envelope ($\text{PVR}_f \rightarrow 0\%$).
-
----
-
-### Future Work 5: Multi-Task Inductive Split-Conformal Prediction Bands
-
-To deploy PIM-MTL into safety-critical structural codes, provide finite-sample, distribution-free **prediction intervals with simultaneous $95\%$ coverage guarantees**.
-
-#### Simultaneous Multi-Task Quantile Calibration
-
-Define the vector non-conformity score over observed test samples in calibration set $\mathcal{D}_{\text{cal}}$:
-
-$$
-S_i = \max_{j \in \text{observed}} \left( \frac{|y_{ij} - \hat{y}_{ij}|}{\hat{\sigma}_{ij} + \epsilon} \right)
-$$
-
-For desired simultaneous significance level $\alpha = 0.05$, compute the empirical quantile:
-
-$$
-\hat{q}_{\text{sim}} = \text{Quantile}\left( \{S_i\}_{i=1}^{N_{\text{cal}}}; \ \frac{\lceil (1 - \alpha)(N_{\text{cal}} + 1) \rceil}{N_{\text{cal}}} \right)
-$$
-
-The simultaneous rectangular prediction region for a new mix $\mathbf{x}_{\text{new}}$ is:
-
-$$
-\mathcal{C}(\mathbf{x}_{\text{new}}) = \prod_{j=1}^3 \left[ \hat{y}_j(\mathbf{x}_{\text{new}}) - \hat{q}_{\text{sim}} \hat{\sigma}_j, \ \hat{y}_j(\mathbf{x}_{\text{new}}) + \hat{q}_{\text{sim}} \hat{\sigma}_j \right]
-$$
-
-guaranteeing:
-
-$$
-\mathbb{P}\Big( \mathbf{y}_{\text{new}} \in \mathcal{C}(\mathbf{x}_{\text{new}}) \Big) \ge 1 - \alpha = 95\%
-$$
 
 ---
 
