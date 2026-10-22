@@ -3,19 +3,19 @@
 ======================================================================
 
 Total Test Specimens: 884
-Compute Device      : cuda:0
+Compute Device      : cuda
 
 --- Quantitative Accuracy Metrics ---
 Target     | Observed N | Coverage   | R2 Score   | RMSE (MPa)   | MAE (MPa) 
 ----------------------------------------------------------------------
-Cs_Mpa     | 884        |    100.0% |    0.9812  |     1.3353   |   1.0183
-Ts_Mpa     | 696        |     78.7% |    0.9867  |     0.1060   |   0.0761
-Fs_Mpa     | 363        |     41.1% |    0.9982  |     0.1024   |   0.0755
+Cs_Mpa     | 884        |    100.0% |    0.9818  |     1.3143   |   0.9931
+Ts_Mpa     | 696        |     78.7% |    0.9857  |     0.1097   |   0.0820
+Fs_Mpa     | 363        |     41.1% |    0.9972  |     0.1262   |   0.0990
 ----------------------------------------------------------------------
 
 --- Physical Feasibility Audit ---
-Tensile Ratio Violations (Rt outside [0.06, 0.18])  : 3.17%
-Flexural Ratio Violations (Rf outside [0.08, 0.25]) : 17.76%
+Tensile Ratio Violations (Rt outside [0.06, 0.18])  : 3.51%
+Flexural Ratio Violations (Rf outside [0.08, 0.25]) : 17.99%
 Physically Impossible Predictions (Ts >= Cs)        : 0.00%
 
 ======================================================================

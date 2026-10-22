@@ -1,0 +1,4 @@
+Target,Property Name,Observed_N,Total_Test_N,Coverage_Pct,R2_Score,RMSE_MPa,MAE_MPa
+Cs_Mpa,Compressive Strength,884,884,100.0,0.9818,1.3143,0.9931
+Ts_Mpa,Splitting Tensile,696,884,78.73,0.9857,0.1097,0.082
+Fs_Mpa,Flexural Strength,363,884,41.06,0.9972,0.1262,0.099

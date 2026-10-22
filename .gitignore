@@ -2,3 +2,5 @@ myenv/
 .ipynb_checkpoints/
 *.tmp
 ~$*
+.venv/
+paper/
