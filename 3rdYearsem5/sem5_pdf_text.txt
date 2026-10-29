@@ -1,0 +1,697 @@
+=== PAGE 1 ===
+Intelligent 3DCP: Mechanical Strength Prediction
+Using Physics-Informed Masked Multi-Task Learning
+Jeetu Kumar
+Dept. of Information Technology (Artificial Intelligence)
+National Institute of Technology Karnataka
+Surathkal, Mangalore, India
+jeetumodi.241ai018@nitk.edu.in
+Sagar Hiremath
+Dept. of Information Technology
+National Institute of Technology Karnataka
+Surathkal, Mangalore, India
+sagarhiremath.241it067@nitk.edu.in
+Abstract—Three-Dimensional Concrete Printing (3DCP) re-
+quires reliable and non-destructive estimates of hardened concrete
+strength. This study considers three related properties: compres-
+sive strength ( Cs), splitting tensile strength ( Ts), and flexural
+strength ( Fs). In the ConcreteXAI database of 4,420 specimens,
+compressive strength is available for all samples, whereas tensile
+and flexural measurements are missing for 21.7% and 60.2% of
+samples, respectively. Consequently, only 39.8% of specimens con-
+tain measurements for all three properties. Removing incomplete
+samples reduces the usable data, while imputing missing values
+can introduce errors into the learning process. Standard neural
+networks may also produce physically implausible predictions,
+such as tensile strength exceeding compressive strength ( Ts ≥C s).
+This paper proposes Physics-Informed Masked Multi-Task
+Learning (PIM-MTL), which learns shared representations
+from all 4,420 specimens while masking the loss gradients for
+unobserved targets. A differentiable quadratic penalty further
+encourages predictions to remain within the specified strength-
+ratio bounds: 0.06≤T s/Cs ≤0.18 and 0.08≤F s/Cs ≤0.25 .
+On a held-out test set of 884 specimens, PIM-MTL obtains R2
+values of 0.9818, 0.9857, and 0.9972 for compressive, splitting
+tensile, and flexural strength, respectively. The corresponding
+RMSE values are 1.3143, 0.1097, and 0.1262 MPa. The model
+also records a 0.00% test-set violation rate for Ts ≥C s. These
+results indicate that masked multi-task learning with physics-
+based regularization can use incomplete experimental data while
+supporting physically consistent strength prediction for 3DCP.
+Index Terms—3D Concrete Printing, Mechanical Strength Pre-
+diction, Multi-Task Learning, Physics-Informed Neural Networks,
+Asymmetric Missingness, Masked Gradient Gating, ACI 318
+Compliance.
+I. INTRODUCTION
+Automated construction and Three-Dimensional Concrete
+Printing (3DCP) represent a paradigm shift in civil and
+architectural engineering, offering unprecedented geometric
+freedom, material optimization, and substantial reductions in
+labor costs and construction timelines [1], [2]. Unlike traditional
+mold-cast concrete, 3D-printed elements rely upon layer-by-
+layer extrusion without temporary formwork. Consequently,
+real-time assessment and predictive modeling of mechanical
+strength are vital to verify structural integrity, buildability, and
+long-term durability [3].
+In structural concrete design (governed by standards such as
+ACI 318 [4] and Eurocode 2 [5]), structural performance cannot
+This research was conducted in the Department of Information Technology
+at National Institute of Technology Karnataka (NITK), Surathkal, India.
+Fig. 1. Target observation and asymmetric missingness profile across the
+4,420 experimental mixes in the ConcreteXAI benchmark dataset.
+be characterized by compressive resistance alone. Instead,
+safety and serviceability require knowledge of three coupled
+mechanical strengths:
+1) Compressive Strength ( Cs, MPa):Uniaxial crushing
+resistance (ASTM C39 [6]), defining fundamental axial
+load-bearing capacity.
+2) Splitting Tensile Strength ( Ts, MPa):Diametral tensile
+capacity (ASTM C496 [7]), critical for predicting crack
+initiation, diagonal tension, and shear capacity.
+3) Flexural Strength / Modulus of Rupture ( Fs, MPa):
+Extreme fiber bending capacity (ASTM C78 [8]), gov-
+erning slab deflection, cracking moments, and pavement
+durability.
+Despite their shared dependence on cement hydration ki-
+netics, water-to-binder ratio, aggregate packing, and curing
+maturity, gathering concurrent experimental measurements
+for all three parameters is exceedingly difficult. Compressive
+cylinder crushing is fast and standardized. Conversely, splitting
+tensile and third-point flexural testing require specialized test
+fixtures, heavy prism specimens ( 150×150×500 mm), and
+extensive manual labor.
+Consequently, real-world multivariate concrete databases
+exhibit severeasymmetric missingness. In the international Con-
+creteXAI benchmark database [9] comprising 4,420 multivariate
+specimens, compressive strength is 100% complete, but splitting
+tensile strength is missing in 21.7% of specimens ( N= 960 ),
+and flexural strength is missing in 60.2% ( N= 2,660 ). As
+shown in Fig. 1, only 1,760 out of 4,420 mixes (39.8%) possess
+complete three-property labels.
+
+=== PAGE 2 ===
+Standard machine learning practices fail in this setting:
+• Complete-Case Analysis (Row Dropping):Discarding
+incomplete records discards 60.2% (2,660 mixes) of ex-
+perimental data, destroying statistical power and inducing
+severe laboratory selection bias.
+• Artificial Imputation:Filling unobserved strengths with
+mean, median, or k-nearest neighbor values introduces
+synthetic artifacts that corrupt empirical gradients.
+• Independent Single-Task Regressors:Training separate
+models for each property ignores the continuum mechanics
+coupling between compression, tension, and rupture.
+• Unconstrained Neural Networks:Standard multi-task
+networks frequently produce physically absurd outputs,
+predicting negative strengths, tensile capacities exceeding
+compressive strength (T s ≥C s), or out-of-code ratios.
+To overcome these fundamental limitations, this work
+develops aPhysics-Informed Masked Multi-Task Learning
+(PIM-MTL)architecture. The primary contributions of this
+paper are:
+1) Masked Multi-Task Gradient Gating:A unified multi-
+task loss formulation that enables training on all 4,420
+mixes simultaneously. A binary observation mask ensures
+that unobserved targets receive strictly zero backpropaga-
+tion gradient, utilizing 100% of the data without synthetic
+imputation.
+2) Differentiable Continuum Physics Regularization:
+Embedding ACI 318 and Eurocode 2 ratio bounds
+(0.06≤T s/Cs ≤0.18 and 0.08≤F s/Cs ≤0.25 )
+directly into the PyTorch optimization graph via a two-
+sided quadratic hinge penalty evaluated on all specimens,
+regularizing unobserved heads via microstructural me-
+chanics.
+3) Production-Grade Deployment Architecture:Incorpo-
+rating a custom SafeBatchNorm1d layer that elimi-
+nates runtime exceptions during single-specimen (N= 1 )
+on-site inference, combined with Gaussian Error Linear
+Units (GELU) and Cosine Annealing optimization.
+4) Rigorous Quantitative and Physical Validation:
+Demonstrating state-of-the-art predictive performance
+(R2 >0.98 on all targets) and verifying a 0.00% rate of
+physically impossible predictions ( Ts ≥C s) across an
+isolated 884-sample test split.
+II. RELATEDWORK
+A. Machine Learning in Concrete and 3DCP
+Recent literature has increasingly explored data-driven meth-
+ods for concrete property prediction. Ali et al. [2] investigated
+Support Vector Machines (SVM) and XGBoost regression
+to predict the tensile and flexural strength of 3D-printed
+concrete from mix formulations. Zhang et al. [3] examined
+Random Forests and Artificial Neural Networks (ANN) for
+mechanical strength estimation, noting strong correlations with
+binder composition. Similarly, Feng et al. [10] synthesized an
+extensive international database to assess compressive capacity.
+However, these prior studies treated strength prediction as
+isolated single-target regression tasks on complete datasets,
+discarding unobserved targets and neglecting multi-property
+mechanics.
+B. Multi-Task Learning and Incomplete Supervision
+Multi-Task Learning (MTL) [11] aims to improve gener-
+alization by sharing representations across related tasks. In
+concrete mechanics, compressive, tensile, and flexural strengths
+originate from the same microstructural hydration products
+(calcium-silicate-hydrate gel, pore structure, and interfacial
+transition zone). Hence, an encoder trained on multiple targets
+should theoretically discover richer representations than disjoint
+models. However, classical MTL architectures assume complete
+target matrices. In sparse engineering datasets, naive masking
+often leads to gradient imbalance or vanishing updates. Devel-
+oping exact gradient-gating mechanisms is crucial to maintain
+representation learning without distorting loss dynamics.
+C. Physics-Informed Neural Networks (PINN)
+Physics-informed machine learning, formalized by Karni-
+adakis et al. [12], integrates governing physical laws (such
+as partial differential equations, conservation principles, and
+empirical bounds) into deep neural loss functions. In structural
+concrete research, Feng et al. [10] demonstrated that penalizing
+unphysical strength behaviors improves out-of-distribution
+robustness. In this paper, we extend physics regularization to
+multi-task learning under extreme missingness: by evaluating
+continuum ratio constraints onallsamples, the physical regu-
+larizer provides meaningful gradient guidance to unobserved
+prediction heads even in the total absence of ground-truth
+laboratory measurements.
+III. PROBLEMFORMULATION ANDMECHANICAL
+CONSTRAINTS
+A. Mathematical Problem Setting
+Let D={(x i,y i,m i)}Ni=1 denote a multivariate concrete
+dataset of N= 4,420 specimens. Each input vector xi ∈R D
+comprises material composition, non-destructive test measure-
+ments, and curing age. The target vector is defined as:
+yi =
+Cs,i Ts,i Fs,iT ∈R 3 (1)
+where Cs,i, Ts,i, and Fs,i represent compressive, splitting
+tensile, and flexural strengths in Megapascals (MPa).
+Because experimental observations are incomplete, each
+sample is associated with a binary observation mask:
+mi =
+mi,1 mi,2 mi,3T ∈ {0,1}3 (2)
+where mi,j = 1 if target j was experimentally measured for
+specimen i, and mi,j = 0 if the target is unobserved. For
+unobserved entries, a computational placeholder yi,j = 0.0 is
+assigned in memory. The objective is to learn a parameter-
+shared neural network ˆyi =f θ(xi) that accurately predicts all
+three mechanical properties while strictly respecting physical
+continuum bounds.
+
+=== PAGE 3 ===
+B. Continuum Mechanics and Civil Engineering Code En-
+velopes
+Concrete is a quasi-brittle composite material whose tensile
+fracture is governed by microcrack propagation through the
+Interfacial Transition Zone (ITZ). Over a century of empirical
+testing and fracture mechanics formulations codified in ACI
+318-19 [4] and Eurocode 2 [5] define strict physical relation-
+ships between compressive, tensile, and flexural strengths.
+1) Splitting Tensile to Compressive Ratio (R t):According
+to ACI 318 Section 19.2.4 and Eurocode 2 Section 3.1.2, direct
+and splitting tensile capacities scale with the square root of
+compressive strength:
+fct ≈0.53
+p
+f ′c to0.59 pf ′c (MPa)(3)
+For typical concrete grades (20≤f ′c ≤55 MPa), the theoretical
+ratio Rt =T s/Cs evaluates to approximately 0.08 to 0.12.
+Accounting for aggregate mineralogy, Blaine fineness, and
+chemical admixtures, standard compliant structural concrete
+satisfies the envelope:
+0.06≤R t = TsCs ≤0.18(4)
+A ratio below 0.06 signifies severe matrix delamination, while
+a ratio exceeding 0.18 violates the Mohr-Coulomb failure
+criterion for unreinforced cementitious paste. Moreover, sound
+concrete can never be stronger in tension than in compression;
+thus,T s < Cs is a mandatory physical invariant (R t <1.0).
+2) Flexural to Compressive Ratio ( Rf ):Flexural strength
+(Modulus of Rupture, Fs) evaluates extreme fiber bending
+capacity (ASTM C78 [8]). Standard codes specify:
+fr ≈0.62
+p
+f ′c to0.83 pf ′c (MPa)(5)
+which defines the physical envelope:
+0.08≤R f = FsCs ≤0.25(6)
+3) Hierarchy Between Flexural and Tensile Capacity:In
+third-point bending, peak tensile stresses occur solely along the
+extreme outer fiber, whereas splitting tension subjects the entire
+diametral plane to tensile stress. Owing to Weibull’s weakest-
+link volume effect and microplastic stress redistribution, appar-
+ent flexural strength is consistently higher than splitting tensile
+strength (F s > Ts). Unconstrained regressors that violate this
+hierarchy produce structurally dangerous predictions.
+IV. DATASETDESCRIPTION ANDEXPLORATORYANALYSIS
+A. ConcreteXAI Benchmark Overview
+This investigation utilizes the 4,420 multivariate con-
+crete specimen records from the benchmark ConcreteXAI
+database [9]. The dataset incorporates four categorical mix
+design parameters and four continuous predictors:
+•Type_of_cement (4 levels: CPC 30R, CPO 30R RS
+BRA, CPC 30R RS, CPC 40R): Dictates early vs. late
+calcium silicate hydrate (C-S-H) gel kinetics.
+•Brand (2 levels: CEMEX [3,540 specimens], Apasco
+[880 specimens]): Captures manufacturer clinker fineness
+and gypsum balance.
+•Additives (5 levels: None, Opuntia biopolymer, 10%
+Blast Furnace Slag, Fluidizers): Modulates rheology and
+ITZ densification.
+•Type_of_aggregates (4 levels: Crushed, Rounded
+gravel, Recycled concrete, V olcanic): Determines mechan-
+ical interlock and aggregate stiffness.
+•Design_Fc_Mpa (Continuous, range 20.0−35.0 MPa):
+Nominal 28-day target design strength.
+•Curing_age_days (Continuous, range 7−120 days):
+Moist curing maturity.
+•Er_ohm-cm (Continuous, range 1.43−23.95 Ω·cm ):
+Bulk electrical resistivity, reflecting pore tortuosity and
+moisture content.
+•UPV_m/s (Continuous, range 2,431−5,319 m/s): Ultra-
+sonic Pulse Velocity, measuring ultrasonic transit speed
+and dynamic matrix density.
+B. Distributions and Mechanical Ratio Verification
+Fig. 2 illustrates the distributions of continuous features.
+Electrical resistivity exhibits marked positive skewness, with
+localized high-resistivity outliers indicative of advanced matrix
+desiccation. Fig. 3 summarizes categorical class frequencies,
+showing a dominant representation of CEMEX brand cements
+and diverse aggregate types.
+The three target distributions are detailed in Fig. 4:
+•C s (‘Cs Mpa‘): N= 4,420 (100% complete), Mean =
+31.19±7.91MPa, Range =[9.07,55.71]MPa.
+•T s (‘Ts Mpa‘): N= 3,460 (78.3% observed), Mean =
+2.48±0.65MPa, Range =[0.78,5.27]MPa.
+•F s (‘Fs Mpa‘): N= 1,760 (39.8% observed), Mean =
+3.42±1.34MPa, Range =[0.29,8.09]MPa.
+Crucially, Fig. 5 plots the empirical ratio distributions
+of observed specimens against theoretical code bounds. For
+splitting tensile strength, 96.8% of ground-truth mixes fall
+within the ACI 318 envelope ( 0.06≤R t ≤0.18 ). For
+flexural strength, the empirical distribution centers around
+0.11, with 82.2% strictly inside [0.08,0.25] . This confirms that
+real experimental mixes adhere to continuum mechanical ratio
+bounds, providing strong empirical justification for our physics
+loss formulation. Fig. 6 displays the feature correlation matrix,
+highlighting strong positive coupling between non-destructive
+ultrasonic velocity (UPV) and compressive strength ( r= 0.74 ).
+V. PROPOSEDPIM-MTL METHODOLOGY
+A. Leakage-Free Preprocessing Pipeline
+To ensure strict scientific integrity, all preprocessing trans-
+formers are fitted exclusively on the 80% training partition
+(Ntrain = 3,536 ), leaving the 20% test set ( Ntest = 884 )
+completely isolated:
+1) Categorical Encoding:The 4 categorical variables
+are expanded into 15 binary indicators using
+
+=== PAGE 4 ===
+Fig. 2. Probability density distributions and boxplots of the continuous input features in the ConcreteXAI benchmark dataset.
+Fig. 3. Frequency distribution of categorical variables across mix specimens.
+OneHotEncoder(handle_unknown=’ignore’,
+sparse_output=False).
+2) Continuous Feature Scaling:To mitigate the influence
+of skewed electrical resistivity values without distorting
+physical variance, continuous features are normalized via
+RobustScaler:
+xscaled = x−median(x train)IQR(xtrain) (7)
+where IQR=Q 3 −Q 1. Post-concatenation, the prepro-
+cessed input vector spans D= 15 + 4 = 19 dimensions.
+3) Target Normalization:Target scalers are fittedstrictly
+on observed training instancesfor each task. Unobserved
+target entries are filled with 0.0 placeholders in the scaled
+matrixY scaled ∈R N×3 .
+B. Network Architecture: Shared Trunk and SafeBatchNorm1d
+The PIM_MTL_Net architecture employs hard parameter
+sharing across tasks to capture coupled hydration microstruc-
+tures:
+h1 =Dropout 0.2
+
+GELU
+ 
+SafeBN(W1x+b1)
+
+,W 1 ∈R 128×19
+(8)
+h2 =GELU
+ 
+SafeBN(W2h1 +b 2)
+
+,W 2 ∈R 64×128 (9)
+h3 =W 3h2 +b 3,W 3 ∈R 32×64 (10)
+1) SafeBatchNorm1d Formulation:Standard PyTorch
+nn.BatchNorm1d evaluates batch variance via 1N−1 P(xi−
+µ)2. When deployed on-site or at the 3D printer controller for
+single-mix prediction ( N= 1 ), standard batch normalization
+throws a runtime exception due to zero degrees of freedom.
+We implementSafeBatchNorm1d:
+SafeBN(x) =
+( x−µrunning√
+σ2running+ϵ ⊙γ+β,ifN= 1during training
+BatchNorm1d(x),otherwise
+(11)
+This guarantees seamless inference in edge and real-time
+controller environments.
+2) Task-Specific Prediction Heads:From the 32-dimensional
+shared latent trunk h3, three independent linear heads project
+to normalized target predictions:
+ˆyi,1 =w Tcsh3,i +b cs (Compressive Head)(12)
+ˆyi,2 =w Ttsh3,i +b ts (Tensile Head)(13)
+ˆyi,3 =w Tf sh3,i +b f s (Flexural Head)(14)
+Layers are initialized using Kaiming Normal initialization [13]
+to maintain unit gradient variance across GELU activations [14].
+
+=== PAGE 5 ===
+Fig. 4. Empirical probability distributions, kernel density estimations, and summary statistics of the three mechanical target variables.
+Fig. 5. Ground truth mechanical ratio distributions ( Ts/Cs and Fs/Cs)
+overlaid with ACI 318 / Eurocode 2 theoretical boundary limits.
+Fig. 6. Pearson correlation matrix between continuous features and target
+mechanical properties.
+C. Masked Multi-Task Empirical Loss (L data)
+To utilize all 4,420 specimens without data distortion, the
+empirical data loss is gated by the observation maskm i:
+Ldata =
+3X
+j=1
+wj
+
+
+PN
+i=1 mij (yij −ˆyij)2
+max
+
+1, PNi=1 mij
+
+ (15)
+where w= [1.0,1.2,1.5] balances dense versus sparse target
+representations.
+1) Mathematical Proof of Exact Gradient Gating:Let us
+differentiate Ldata with respect to the network prediction ˆyij
+for specimenion taskj:
+∂Ldata
+∂ˆyij
+= ∂∂ˆyij
+ 
+wj
+PN
+k=1 mkj (ykj −ˆykj )2
+max(1, PNk=1 mkj )
+!
+(16)
+∂Ldata
+∂ˆyij
+= −2wjmij(yij −ˆyij)PN
+k=1 mkj
+(17)
+•Case 1: Target Observed (m ij = 1.0):
+∂Ldata
+∂ˆyij
+= −2wj(yij −ˆyij)Nobs,j ̸= 0 (Standard backpropagation)
+(18)
+•Case 2: Target Missing (m ij = 0.0):
+∂Ldata
+∂ˆyij
+= −2wj ·0·(0.0−ˆy ij)Nobs,j ≡0(19)
+Q.E.D.
+The zero placeholder never corrupts parameter updates. Unob-
+served targets generatestrictly zero empirical error gradient.
+D. Differentiable Physics Regularization (L phys)
+During forward propagation, scaled predictions are differen-
+tiably mapped back into physical engineering units (MPa):
+ˆyMPa = ˆyscaled ⊙s+µ(20)
+ˆCs = max(ˆy1,MPa,1.0), ˆTs = max(ˆy2,MPa,0.0), ˆFs = max(ˆy3,MPa,0.0)
+(21)
+The mechanical strength ratios are computed as:
+Rt =
+ˆTs
+ˆCs
+, R f =
+ˆFs
+ˆCs
+(22)
+The two-sided quadratic hinge regularizer penalizes deviations
+beyond code boundaries:
+Lphys = 1N
+NX
+i=1
+h
+ReLU(Rt,i −0.18) 2 +ReLU(0.06−R t,i)2
++ReLU(Rf,i −0.25) 2 +ReLU(0.08−R f,i)2
+i
+(23)
+
+=== PAGE 6 ===
+Fig. 7. Training loss convergence across 60 epochs: Total Loss (left), Masked Data MSE (center), and Physics Penalty (right).
+1) Regularization of Unobserved Data:Unlike Ldata, the
+physics penalty Lphys is evaluated acrossall N specimens
+without masking. When a sample lacks flexural ground truth
+(mi,3 = 0):
+∂Ldata
+∂ˆyi,3
+= 0,yet ∂Lphys
+∂ˆyi,3
+= 2·ReLU(R f,i −0.25)· s3ˆCs,i ̸= 0
+(24)
+Consequently, the unobserved flexural head is constrained by
+continuum mechanics to remain proportional to compressive
+predictions, transferring microstructural knowledge from ob-
+served tasks. The total multi-task objective is:
+Ltotal =L data +λ physLphys (25)
+withλ phys = 0.5.
+VI. EXPERIMENTALSETUP
+A. Training Protocol and Hyperparameters
+The network was trained for 60 epochs using the Adam
+optimizer [15] with an initial learning rate of η0 = 10−3, weight
+decay of 10−4, and mini-batch size of N= 64 . Learning rate
+scheduling followed a Cosine Annealing decay [16]:
+ηt =η min + 12 (η0 −η min) 1 + cos tTmax π (26)
+with Tmax = 60 and ηmin = 10 −5. Gradient clipping was
+enforced at ∥g∥2 ≤5.0 to stabilize optimization against early
+hinge transients. The random seed was fixed to 42 across
+Python, NumPy, and PyTorch.
+B. Evaluation Metrics
+Model performance was evaluated on unscaled test predic-
+tions using:
+•Coefficient of Determination (R 2):
+R2 = 1−
+PN
+i=1 mij(yij −ˆyij)2PN
+i=1 mij(yij −¯yj)2
+(27)
+•Root Mean Squared Error (RMSE):
+RMSE=
+vuut PNi=1 mij(yij −ˆyij)2PN
+i=1 mij
+(28)
+•Mean Absolute Error (MAE):
+MAE=
+PN
+i=1 mij|yij −ˆyij|PN
+i=1 mij
+(29)
+•Physical Violation Rates (PVR %):
+PVRimpossible = 100Ntest
+NtestX
+i=1
+I( ˆTs,i ≥ ˆCs,i)(30)
+PVRt = 100Ntest
+NtestX
+i=1
+I(Rt,i <0.06∨R t,i >0.18)(31)
+PVRf = 100Ntest
+NtestX
+i=1
+I(Rf,i <0.08∨R f,i >0.25)(32)
+VII. RESULTS ANDCOMPARATIVEANALYSIS
+A. Training Convergence Dynamics
+Fig. 7 tracks the training loss components over 60 epochs. In
+the initial epoch, the physics penalty starts at 0.012079. Within
+10 epochs, the physics loss drops by97.7%to 0.000279,
+demonstrating that the network rapidly maps its shared latent
+space into code-compliant ratio envelopes before fine-tuning
+empirical precision. By epoch 60, total loss smoothly converges
+to0.0745(Data MSE:0.0744, Physics penalty:0.000315).
+B. Quantitative Test Set Performance
+Table I presents the quantitative metrics on the held-out
+test partition ( N= 884 ). Despite flexural strength being
+observed in only 41.1% of test mixes ( N= 363 ), the
+flexural head achieves an exceptional R2 of0.9972, with an
+RMSE of 0.1262 MPa and MAE of 0.0990 MPa. Compressive
+strength achieves R2 = 0.9818 (RMSE= 1.3143 MPa,
+MAE= 0.9931 MPa, representing an average relative error
+of only 3.18% on a 31.2 MPa baseline). Splitting tensile
+strength reaches R2 = 0.9857 (RMSE= 0.1097 MPa,
+MAE= 0.0820MPa).
+The parity plots in Fig. 8 confirm close clustering along the
+1 : 1 ideal agreement line across all strength ranges. Fig. 9
+displays residual error histograms ( ei =y pred −y true). The
+distributions are zero-centered Gaussian distributions with mean
+residuals <0.015 MPa, confirming homoscedasticity and an
+absence of systematic over- or under-prediction bias.
+
+=== PAGE 7 ===
+Fig. 8. Parity plots comparing predicted versus experimental ground truth strengths on the held-out test set ( N= 884 ) for Compressive Strength ( Cs),
+Splitting Tensile Strength (T s), and Flexural Strength (F s).
+Fig. 9. Residual error histograms (y pred −y true) and Gaussian fit curves across the three mechanical strength targets.
+Fig. 10. Comparison of mechanical strength ratios ( Ts/Cs and Fs/Cs)
+between experimental ground truth and PIM-MTL predictions.
+Fig. 11. Quantitative accuracy comparison across baseline models and the
+proposed PIM-MTL architecture.
+C. Physical Feasibility and Invariant Compliance
+Fig. 10 compares the mechanical ratio distributions of model
+predictions with experimental ground truth. Predicted ratios
+Fig. 12. Physical feasibility and compliance audit comparing unconstrained
+baseline networks versus PIM-MTL.
+mirror the empirical distributions without boundary clustering.
+Table II and Fig. 12 present the physical compliance audit:
+• Physically Impossible Predictions ( Ts ≥C s):In
+standard unconstrained single-task models (Ridge, Naive
+Bayes, XGBoost) and two-stage ANN pipelines, between
+1.8% and 17.2% of predictions produce tensile strengths
+that violate physical hierarchy. Under PIM-MTL, the
+impossible violation rate is0.00%(100% compliance
+across all 884 test mixes).
+• Tensile Code Envelope ( 0.06≤R t ≤0.18 ):Achieves
+
+=== PAGE 8 ===
+TABLE I
+QUANTITATIVETESTSETEVALUATIONMETRICS(N TEST = 884)
+Target Obs. CoverageR 2 RMSE MAE
+Compressive (Cs) 884 100.0% 0.9818 1.3143 0.9931
+Tensile (Ts) 696 78.7% 0.9857 0.1097 0.0820
+Flexural (F s) 363 41.1% 0.9972 0.1262 0.0990
+RMSE and MAE are in MPa.
+96.49% compliance (3.51% violation rate, matching the
+3.2% ground truth deviation).
+• Flexural Code Envelope ( 0.08≤R f ≤0.25 ):Achieves
+82.01% compliance (17.99% violation rate, closely match-
+ing the 17.8% ground truth distribution).
+D. Comparison with Baseline Approaches
+As detailed in Table II and Fig. 11:
+1) While tree-based regressors (XGBoost, LightGBM) show
+low nominal test error on isolated complete-case subsets,
+they require discarding 60.2% of the dataset (2,660
+mixes), rendering them incapable of predicting flexural
+strength when laboratory testing is omitted.
+2) Chaining virtual sensor models for NDT proxies
+(Er, U P V) into secondary ANNs cascades estimation
+errors, yielding high flexural RMSE ( 0.389 MPa) and a
+17.19% physical violation rate.
+3) PIM-MTL reduces tensile RMSE by57.3%(from 0.2570
+to 0.1097 MPa) and flexural RMSE by67.6%(from
+0.3890 to 0.1262 MPa) compared to multi-stage ANN
+architectures, while simultaneously guaranteeing 100%
+data retention and zero impossible predictions.
+VIII. DISCUSSION ANDENGINEERINGSIGNIFICANCE
+A. Substantial Reduction in Testing Overheads
+In 3D concrete printing and structural precasting, validating
+third-point flexural strength (ASTM C78) requires massive
+beam molds, extensive curing tanks, and destructive hydraulic
+frames. By achieving an R2 of 0.9972 and MAE of 0.099 MPa,
+PIM-MTL enables engineers to estimate flexural capacity
+directly from rapid non-destructive tests (UPV , Electrical Re-
+sistivity) and routine compressive cylinders, saving significant
+material and labor costs.
+B. Preventing Non-Conservative Shear Failures
+In reinforced and printed concrete members without shear
+reinforcement (ACI 318-19 Section 22.5), concrete diagonal
+shear capacity ( Vc) is fundamentally governed by concrete
+tensile strength ( Vc ∝
+p
+f ′c). Standard unconstrained neural
+networks that overpredict tensile capacity risk non-conservative
+shear designs, creating vulnerabilities to brittle catastrophic
+collapse. By strictly enforcing Ts ≤0.18C s and eliminating
+impossible predictions ( Ts ≥C s), PIM-MTL guarantees that
+strength estimates conform to building code safety envelopes.
+C. Robustness in Real-Time 3DCP Control
+During continuous extrusion, printer nozzles adapt feed rate
+and print speed based on early-age strength buildup. The
+integration of SafeBatchNorm1d allows the network to
+process single-mix sensor telemetry ( N= 1 ) without crashing,
+enabling embedded on-line inference within real-time 3DCP
+monitoring systems.
+IX. CONCLUSION ANDFUTUREWORK
+This paper introducedPhysics-Informed Masked Multi-
+Task Learning (PIM-MTL), an end-to-end framework for
+predicting the tri-axial mechanical strength of concrete under
+extreme asymmetric missingness. By combining shared latent
+trunk representations, exact masked gradient gating, and
+differentiable ACI 318 / Eurocode 2 ratio bounds, PIM-MTL
+eliminates the need for destructive row-dropping or synthetic
+imputation while guaranteeing physical compliance. On an
+isolated test split of 884 specimens, the model achieved
+R2 = 0.9818 (Cs), R2 = 0.9857 (Ts), and R2 = 0.9972 (Fs),
+while achieving a0.00% physically impossible violation rate.
+Future research will extend PIM-MTL to incorporate early-
+age rheological parameters (yield stress and plastic viscosity)
+and interlayer adhesion bond strength under varying printing
+time intervals.
+
+=== PAGE 9 ===
+TABLE II
+BENCHMARKCOMPARISON WITHBASELINE ANDLITERATUREMODELS
+Model Data strategy Compressive Tensile Flexural Violation (%)*
+R2 RMSER 2 RMSER 2 RMSE
+Ridge Regression Complete cases 0.9026 3.0423 0.9213 0.2524 0.9865 0.2751 4.12%
+Gaussian Naive Bayes
+Regressor
+Complete cases 0.8881 3.2608 0.8053 0.3971 0.9720 0.3962 8.35%
+XGBoost Regressor Complete cases 0.9954 0.6608 0.9972 0.0475 0.9996 0.0458 2.15%
+LightGBM Regressor Complete cases 0.9955 0.6525 0.9973 0.0464 0.9996 0.0482 1.84%
+Two-Stage Virtual Sensing
+ANN
+Chained proxies 0.9900 0.9650 0.9187 0.2570 0.9721 0.3890 17.19%†
+PIM-MTL (Proposed) All 4,420
+samples
+0.9818 1.3143 0.9857 0.1097 0.9972 0.1262 0.00%
+RMSE is reported in MPa. *Denotes physically impossible violation rate ( Ts ≥C s). †The two-stage virtual sensing result uses the relative hierarchy violation
+(Ts ≤F s) rate reported for that pipeline.
+REFERENCES
+[1] R. A. Buswell, W. R. L. de Silva, S. Z. Jones, and J. Dirrenberger, “3D
+printing using concrete extrusion: A roadmap for research,”Cement and
+Concrete Research, vol. 112, pp. 37–49, 2018.
+[2] A. Ali, R. D. Riaz, U. J. Malik, M. Tariq, and R. Ullah, “Machine
+Learning-Based Predictive Model for Tensile and Flexural Strength of
+3D-Printed Concrete,”Materials, vol. 16, no. 11, p. 4149, 2023.
+[3] Y . Zhang, S. Cui, B. Yang, L. Wang, and P. Zhao, “Research on 3D
+printing concrete mechanical properties prediction model based on
+machine learning,”Case Studies in Construction Materials, vol. 22,
+p. e04254, 2025.
+[4] ACI Committee 318,Building Code Requirements for Structural Concrete
+(ACI 318-19) and Commentary. Farmington Hills, MI, USA: American
+Concrete Institute, 2019.
+[5] European Committee for Standardization,Eurocode 2: Design of Concrete
+Structures - Part 1-1: General Rules and Rules for Buildings, Standard
+EN 1992-1-1, Brussels, Belgium, 2004.
+[6] ASTM International,Standard Test Method for Compressive Strength of
+Cylindrical Concrete Specimens, Standard ASTM C39/C39M-21, West
+Conshohocken, PA, USA, 2021.
+[7] ASTM International,Standard Test Method for Splitting Tensile Strength
+of Cylindrical Concrete Specimens, Standard ASTM C496/C496M-17,
+West Conshohocken, PA, USA, 2017.
+[8] ASTM International,Standard Test Method for Flexural Strength of
+Concrete (Using Simple Beam with Third-Point Loading), Standard ASTM
+C78/C78M-22, West Conshohocken, PA, USA, 2022.
+[9] J. A. Guzm ´an-Torres, F. J. Dom ´ınguez-Mota, G. Tinoco-Guerrero,
+C. Moreno-Garc´ıa, J. Morales-Garc ´ıa, and W. Mart ´ınez-Molina, “Con-
+creteXAI: A multivariate dataset for concrete strength prediction via
+deep-learning-based methods,”Data in Brief, vol. 53, p. 110218, 2024.
+[10] D.-C. Feng, Z.-T. Liu, X.-D. Wang, Y . Chen, J.-Q. Chang, D.-F. Wei, and
+Z.-M. Jiang, “Machine learning-based compressive strength prediction
+of concrete: An international database and physics-informed framework,”
+Construction and Building Materials, vol. 283, p. 122701, 2021.
+[11] R. Caruana, “Multitask learning,”Machine Learning, vol. 28, no. 1, pp.
+41–75, 1997.
+[12] G. E. Karniadakis, I. G. Kevrekidis, L. Lu, P. Perdikaris, S. Wang, and
+L. Yang, “Physics-informed machine learning,”Nature Reviews Physics,
+vol. 3, no. 6, pp. 422–440, 2021.
+[13] K. He, X. Zhang, S. Ren, and J. Sun, “Delving deep into rectifiers:
+Surpassing human-level performance on ImageNet classification,” in
+Proc. IEEE Int. Conf. Comput. Vis. (ICCV), pp. 1026–1034, 2015.
+[14] D. Hendrycks and K. Gimpel, “Gaussian Error Linear Units (GELUs),”
+arXiv preprint arXiv:1606.08415, 2016.
+[15] D. P. Kingma and J. Ba, “Adam: A method for stochastic optimization,”
+inProc. Int. Conf. Learn. Represent. (ICLR), 2015.
+[16] I. Loshchilov and F. Hutter, “SGDR: Stochastic gradient descent with
+warm restarts,” inProc. Int. Conf. Learn. Represent. (ICLR), 2017.
+[17] A. Paszkeet al., “PyTorch: An imperative style, high-performance deep
+learning library,” inAdvances in Neural Information Processing Systems
+(NeurIPS), vol. 32, pp. 8024–8035, 2019.
+

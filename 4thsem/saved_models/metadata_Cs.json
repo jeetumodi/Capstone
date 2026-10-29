@@ -1,0 +1,21 @@
+{
+    "target_key": "Cs",
+    "target_column": "Cs_Mpa",
+    "target_description": "Compressive Strength (Cs_Mpa)",
+    "best_model_name": "LightGBM",
+    "best_parameters": {
+        "regressor__colsample_bytree": "0.8",
+        "regressor__learning_rate": "0.05",
+        "regressor__num_leaves": "63",
+        "regressor__subsample": "0.8"
+    },
+    "test_metrics": {
+        "R2": 0.9955261707338761,
+        "Adj_R2": 0.9954989948537477,
+        "MAE": 0.42785172509052277,
+        "RMSE": 0.6519988963841391,
+        "MSE": 0.42510256088613535
+    },
+    "cv_score": 0.9941700279216498,
+    "pipeline_file": "best_pipeline_Cs.pkl"
+}

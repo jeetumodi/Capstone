@@ -1,0 +1,1039 @@
+Type_of_cement,Brand,Additives,Type_of_aggregates,Design_Fc_Mpa,Curing_age_days,Er_ohm-cm,UPV_m/s,Ts_Mpa
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,3.9284,3575.4661,2.2479
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.027,3445.5497,1.5894
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.0009,3898.8034,2.3488
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,9.0223,4138.5638,3.1902
+CPC 30R,CEMEX,No_additions,Crushed,28,28,8.1577,4572.3415,3.0265
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.2347,3418.3578,2.0965
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.4032,3189.4533,2.1175
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5733,2992.3991,1.5118
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4515.8435,3.1908
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3191.3133,1.54
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.9,2464.287,0.5372
+CPC 30R,CEMEX,No_additions,Crushed,28,28,5.8565,4501.2406,2.9416
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.5585,4383.9528,2.5426
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.8388,4493.698,3.2864
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3534.7821,2.3542
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.4908,4322.2931,5.0222
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,14.1372,4519.944,3.0945
+CPC 30R,CEMEX,No_additions,Crushed,28,28,8.0968,4481.5902,2.924
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.6108,4329.0,2.8864
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.1686,3463.7971,1.5894
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4519,4431.5696,3.2943
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,13.7574,4569.8576,3.1383
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3593.6269,2.2455
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,12.8894,4598.0,3.5243
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.6987,4096.5861,3.1886
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.0686,4535.5113,2.8379
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.2102,4508.4891,3.1868
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.0931,4227.4124,4.5277
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.3775,3398.9283,1.6094
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4294.1868,3.5034
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.8316,4202.7683,4.5387
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.0692,4311.7296,5.1036
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6838,3042.2742,1.5007
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8586,2581.0893,0.5311
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.9043,3314.4279,1.3144
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.2862,4598.0,3.4892
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,3.9741,3381.0677,2.2232
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.7025,4539.9999,3.2495
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.8905,3471.8241,2.087
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3511.4367,2.2555
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.476,4443.2267,2.5647
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8796,2483.2778,0.558
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.2497,3239.1618,1.3075
+CPC 40R,Apasco,No_additions,Crushed,35,40,3.9598,3281.1395,2.0437
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.6765,3146.5672,2.2414
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.2889,3153.0168,2.2414
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2832,3659.4292,1.9513
+CPC 30R,CEMEX,No_additions,Crushed,28,28,7.1626,4508.5645,2.8633
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.4151,4502.6425,3.2139
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.0051,4598.0,3.5888
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4307.1818,3.5192
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.0226,4351.9107,3.752
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.2446,3306.6636,1.0812
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.4361,4413.0798,2.7788
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2212,3072.1394,1.5853
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.274,3658.9937,1.9501
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.2067,4531.7009,2.3822
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3534.1491,2.3557
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5667,2999.5325,1.5021
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4285.0765,3.5019
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.1051,3699.0277,2.0611
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.6705,4323.6498,2.3001
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.5482,3735.1234,2.2308
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.9965,4310.2641,2.9005
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.5285,3391.6809,1.403
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.3745,4437.6054,3.2724
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.6001,4391.3334,2.5149
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.8905,3451.2312,2.1363
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,13.6385,4491.4675,3.0934
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,6.2056,3345.8588,2.0974
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,7.0623,3310.4398,1.2708
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.3303,4420.4063,2.6815
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7124,4359.645,2.285
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,9.0583,4099.1883,3.1902
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.9768,3336.4883,1.2623
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.6518,4326.1084,5.0074
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2832,3660.7359,1.8672
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.6686,4328.4054,2.3489
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.4304,4380.9941,2.5257
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5834,2960.3959,1.4756
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.6818,3391.9922,1.4951
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.7004,4355.4221,3.7507
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.78,3921.5333,2.3288
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.0671,4390.816,2.4216
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3535.2721,2.3567
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.1701,3426.5781,2.1121
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.1051,4327.6703,2.6231
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.9,2653.5863,0.5454
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,4.9993,4356.8033,2.6741
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.5055,4377.5413,3.7509
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.506,3047.1104,1.0862
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.1987,4444.4727,2.6918
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.3408,3014.7568,1.077
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.2495,3410.0209,1.3828
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.8905,3475.3725,2.1051
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3189,3233.0785,2.1175
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.418,4342.0653,2.3266
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2832,3505.2857,1.5894
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3014,3464.5184,2.0975
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5823,3000.2179,1.5008
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8026,2345.9812,0.558
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6048,3041.5929,1.4879
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.8217,4106.1485,3.1896
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.9499,2407.9095,0.5675
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.3917,4530.9204,2.8604
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1093,3537.7996,2.3511
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.0932,3519.0825,1.5839
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.7427,4492.4105,3.3207
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.9591,4193.4601,4.5364
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1419,3539.7612,2.3511
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.4049,4433.0251,2.6257
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.4471,4347.6221,3.7505
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.2691,4536.473,2.3845
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.0686,4551.9297,2.8784
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.6535,4424.3198,2.7334
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.8324,4500.1567,2.8742
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.1245,4483.4921,2.4492
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,13.6164,4490.2613,3.0843
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.7713,4277.0193,3.5428
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.8905,3456.4786,2.091
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.3618,4391.0717,2.3746
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.9006,4518.2072,3.2495
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.6794,3508.2284,1.5894
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4479.7602,3.3949
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.2909,3936.6492,2.3458
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.865,2519.9439,0.5408
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.2111,4427.1306,2.6087
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.9313,3192.2811,2.1409
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6048,3007.3149,1.4702
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.0681,3539.2646,2.3511
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,9.389,4090.0584,3.1888
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,14.1372,4537.9405,3.0945
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.3098,3310.3494,1.0852
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2832,3656.0688,1.992
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,14.1372,4522.6628,3.0945
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6687,3001.677,1.4571
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.6383,3339.849,1.6087
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.811,2565.7394,0.5332
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.0795,3439.5929,2.2656
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7124,4357.8086,2.285
+CPC 30R,CEMEX,No_additions,Crushed,28,28,7.957,4476.8031,3.0331
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,6.2988,4510.2799,2.8952
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.7877,4327.3845,2.3663
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,6.3156,4567.4709,2.8446
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.6673,2993.0129,2.118
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.3371,3307.1719,1.0884
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4301.8461,3.514
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.0686,4542.1122,2.816
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5951,2970.5596,1.5096
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.5217,4329.0,2.8864
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.0448,3656.5843,1.9368
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.2102,4515.9735,3.1856
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5742,2963.5477,1.4902
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.553,4483.8518,2.3911
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.1907,4246.3098,3.5758
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5723,2988.7904,1.4592
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.7594,4245.965,3.5514
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.7342,3738.3856,2.0974
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,6.097,4574.4842,2.8468
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.5411,4478.189,2.5149
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3535.5771,2.3544
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,14.0689,4525.5744,3.1401
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.2996,3410.7408,1.3935
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.8775,4494.8691,3.0011
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.2832,4324.3706,2.8821
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.5452,4337.3986,2.4816
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.5039,3100.1537,1.097
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.1929,3658.7684,1.956
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.509,3165.0895,1.0903
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.9039,3155.4264,2.2414
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.9833,3222.3449,1.2228
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.5346,3248.9439,2.1175
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.364,4429.9969,2.3266
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.3006,4664.7646,3.4161
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4499.3725,3.2011
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4281.7633,3.502
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.9038,4521.4263,3.2495
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,13.4723,4513.4312,3.1484
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3533.3712,2.356
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.7298,4508.3277,3.2495
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.2691,3306.7258,1.0818
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2832,3659.7945,1.921
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.8539,4481.8972,2.9973
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.0505,3587.3548,2.2457
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4119,4456.3361,3.1967
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5497,3042.3448,1.4879
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.8671,4206.2332,4.5279
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.3995,3004.2905,2.0277
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.306,3309.856,1.0819
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.228,4320.4642,2.3715
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4303.434,3.5308
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3201.6312,1.5357
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.3019,4413.8767,2.7048
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.1423,4522.9131,2.8604
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,10.926,4367.4676,3.7511
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.4793,3483.841,2.2741
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.1467,4510.5399,2.3798
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.4978,3219.2234,2.0794
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7007,4319.8838,2.3262
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,9.058,4008.8857,3.1902
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6089,2949.9016,1.4634
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.4988,3082.5133,1.1015
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.3786,3375.2469,1.4919
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.7675,2949.2386,1.467
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.4803,3219.7654,2.1175
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.0337,3842.9618,2.3392
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.6702,4322.2862,5.1623
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.8791,4492.0842,3.2958
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2832,3482.7565,1.5894
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.1794,3850.4435,2.3224
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.0431,3146.3615,2.2414
+CPC 30R,CEMEX,No_additions,Crushed,28,28,9.6846,4547.4662,2.7647
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4295.0396,3.4983
+CPC 30R,CEMEX,No_additions,Crushed,28,28,9.8232,4584.3308,2.6727
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.3627,4398.9757,2.3266
+CPC 30R,CEMEX,No_additions,Crushed,28,28,9.8096,4547.9102,2.862
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.5798,3483.8475,1.5743
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.2654,3161.2465,2.2244
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7124,4359.8134,2.285
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.0686,4561.5727,2.8716
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.513,3157.1007,2.2414
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.2822,4545.2015,2.8974
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.8158,4659.6804,3.3322
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.3667,4501.4169,3.3571
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.6522,4238.3511,3.5501
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.2602,4261.9699,3.5917
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2832,3353.3069,1.5894
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.0593,4450.9887,2.447
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.3951,4423.381,3.2943
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.3915,4385.2906,2.3727
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.0468,4338.857,2.7009
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3643.3786,2.2429
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5433,3000.9581,1.4645
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3196.9111,1.6288
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.4581,4420.2947,2.7628
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.5314,4241.9809,3.4816
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.3455,3281.8636,1.6396
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,13.5656,4491.7888,3.0597
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,5.8905,3662.9649,1.9965
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.3913,4369.6406,2.3266
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.0647,3527.0903,2.3511
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.4603,4665.3669,3.3885
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6605,3042.0352,1.4879
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.0063,3187.4476,2.0631
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.3909,3287.7481,1.0841
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.4313,3688.6804,2.2959
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.3401,4375.14,2.6612
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.597,4251.5809,3.4816
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3014,3454.1913,2.0627
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.0346,3306.8395,1.2763
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.3131,3415.2484,1.3291
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.0291,4226.965,4.5277
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2337,3658.142,1.9975
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.4293,4388.1877,2.7841
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.6844,3309.1919,2.1175
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5397,2966.1014,1.4631
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3188.7919,1.544
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,6.0936,4494.0,2.9124
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,4.9544,3699.4549,2.1582
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4293.5966,3.5069
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.4057,3153.775,1.0952
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.1452,3586.0066,2.2138
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4305.2897,3.5051
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6125,2989.5055,1.4756
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3206.3951,1.5339
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5972,3043.0144,1.4879
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.6257,3370.8761,1.4466
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,13.3977,4493.1663,3.043
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3504.756,2.2693
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.2631,4485.6243,2.5098
+CPC 30R,CEMEX,No_additions,Crushed,28,28,9.0151,4516.3708,3.0172
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,12.9591,4494.9723,3.1259
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.9,2496.1158,0.5449
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.1814,3417.6304,1.4002
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.8051,3316.2081,1.2627
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.1187,3155.6428,2.2514
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.0018,4598.0,3.4971
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3140.2009,1.5351
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.9446,3255.5187,2.1456
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,14.0992,4316.59,5.1036
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3145,3227.3153,2.1175
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.9,2519.3887,0.5351
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.185,3657.8865,1.9539
+CPC 30R,CEMEX,No_additions,Recycled,28,28,7.1126,4307.8398,2.8741
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.0136,3391.4666,1.2576
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.792,3896.3781,2.3318
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2285,3506.1198,1.5859
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,14.1372,4528.4469,3.0945
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.9893,4523.6106,2.8893
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.2772,3211.196,1.2243
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.4076,4386.8553,2.5165
+CPC 30R,CEMEX,No_additions,Crushed,28,28,9.7077,4554.5557,2.8975
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.2102,4557.6199,3.1675
+CPC 30R,CEMEX,No_additions,Crushed,28,28,7.126,4517.066,2.8082
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,5.8905,3662.4613,1.9721
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.4387,4378.7382,2.6626
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6046,2986.35,1.5179
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.7181,4496.9817,3.2495
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.0881,3542.2254,2.3519
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,4.7124,3761.4931,2.1173
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4293.7657,3.5024
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2832,3659.7602,1.904
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.542,3041.8137,1.4879
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.4256,3378.9625,1.5176
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.8684,3211.3852,1.3036
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.6928,4096.1974,3.1959
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.5402,4327.7041,2.3355
+CPC 30R,CEMEX,No_additions,Crushed,28,28,5.7683,4512.2311,3.0275
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.1382,3163.4296,1.5582
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4304.4637,3.4967
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.3448,4434.8141,3.2539
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.3143,4386.2041,2.3733
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.609,3001.9542,1.4663
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.3577,3396.3046,1.4998
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.386,4456.275,3.2844
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.4023,3403.2429,1.3022
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3535.951,2.3572
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.538,3041.6905,1.4879
+CPC 30R,CEMEX,No_additions,Crushed,28,28,6.6759,4485.0782,2.9239
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,12.5664,4659.9013,3.4306
+CPC 30R,CEMEX,No_additions,Crushed,28,28,7.1605,4521.525,2.9657
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.3476,4468.6465,2.449
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.0817,3540.8435,2.3528
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.0916,3538.6251,2.3522
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.1409,3658.0491,1.9406
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.8173,3402.9273,2.2741
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5827,2963.0133,1.4561
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.7184,4215.0773,4.5338
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.2657,4510.3258,2.8604
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,14.1372,4534.8137,3.0945
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.3006,3090.7131,2.0631
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,6.0964,3277.7637,2.1285
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.6632,3731.5369,2.1367
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.2392,4239.4914,3.489
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,12.9591,4502.3542,3.0695
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.2832,4299.4701,2.8545
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.9961,4347.9892,5.2296
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8355,2434.5926,0.5592
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.375,4416.9386,2.67
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6886,2970.8789,1.4542
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.8092,4091.8619,3.1873
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.6055,3476.0476,1.6211
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.1663,4445.8972,2.3227
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4294.2397,3.5324
+CPC 40R,Apasco,fluidizer,Crushed,35,60,8.7713,4243.6953,2.4554
+CPC 40R,Apasco,fluidizer,Crushed,35,60,9.2868,4315.6115,2.4515
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.9721,3201.3658,1.5676
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.0277,3286.8498,2.0518
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,9.2056,4155.0972,3.1902
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,3.9912,3396.7141,1.4923
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3532.2659,2.3582
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.0981,3187.7828,2.2514
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.8222,3366.0228,2.1112
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.4294,4329.7573,2.3266
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.1874,4460.6829,2.5157
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3543.4645,2.2511
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8402,2545.7667,0.558
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3251.0908,1.5908
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2445,3656.2066,1.9835
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3014,3463.5203,2.1334
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.7381,3001.0755,1.4585
+CPC 30R,CEMEX,No_additions,Crushed,28,28,7.0885,4554.3608,2.9847
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.9834,3157.1576,2.2414
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.5131,3303.0516,1.2763
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5449,3043.0199,1.4879
+CPC 30R,CEMEX,No_additions,Crushed,28,28,7.8312,4488.308,2.8287
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4508.4139,3.2174
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.3532,4347.6779,2.9123
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.3941,4310.0488,2.4816
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6769,2999.9875,1.5001
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.3939,3137.4209,2.2414
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.1864,4453.2722,2.67
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3212.9842,1.5527
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,10.927,4379.6525,3.7511
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.4515,3346.5134,1.5205
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,4.7124,3778.0669,2.1356
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.3045,4335.5435,2.3473
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1214,3529.1907,2.3511
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.3198,4561.9928,2.8744
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.5695,4251.644,3.544
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3968,3671.8929,2.2809
+CPC 30R,CEMEX,No_additions,Recycled,28,28,7.1823,4347.6687,2.8602
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5889,2950.1113,1.4583
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.2438,4458.3384,2.4553
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.2688,4488.7657,2.8604
+CPC 40R,Apasco,fluidizer,Crushed,35,120,11.9901,4227.5625,4.5277
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.0707,3185.6026,2.2573
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.2832,4296.0777,2.8713
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.4978,3263.7443,2.0955
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.2079,3404.9559,2.0578
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.4721,4254.2186,3.4816
+CPC 30R,CEMEX,No_additions,Recycled,28,28,7.1998,4293.078,2.8769
+CPC 40R,Apasco,fluidizer,Crushed,35,60,9.2419,4304.517,2.4493
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6552,3001.8462,1.4885
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3533.4665,2.3458
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.2382,3236.042,1.0842
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2832,3467.7339,1.5894
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2832,3659.8075,1.9834
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.5986,4333.1437,2.5149
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.0476,4348.1507,3.7512
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2832,3662.3536,1.9063
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.064,3399.0422,1.2607
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3168.412,1.5323
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.6121,3940.4985,2.3458
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3248.7658,1.622
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.7156,4106.4277,3.1854
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5941,2962.4503,1.4885
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,5.8905,3659.3469,1.9094
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.2625,3163.9028,2.2256
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6614,3032.6514,1.4909
+CPC 40R,Apasco,fluidizer,Crushed,35,40,7.9899,3922.1712,2.3493
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3660.9545,2.2912
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.0686,4544.926,2.8411
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.0868,4515.375,2.3789
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3532.8021,2.3452
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2622,3516.533,1.5391
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.9149,4317.3062,4.9656
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.0774,3538.8448,2.3517
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.2582,4265.0474,3.593
+CPC 30R,CEMEX,No_additions,Crushed,28,28,6.6759,4509.9199,2.9239
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7124,4357.2235,2.285
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.0686,4537.8152,2.838
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.141,3170.5277,2.252
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.7666,4105.1916,3.19
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.8696,4348.0546,5.1036
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.7585,3396.9749,2.2741
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.9,2575.5535,0.55
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.1834,3279.0638,2.0555
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.3609,4598.0,3.5402
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.2759,4666.2427,3.2933
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4223,4437.5438,3.2883
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.7952,3032.245,1.4958
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7608,4264.0,2.3183
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.1697,4239.7703,4.5277
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.6597,4324.6998,5.1396
+CPC 40R,Apasco,fluidizer,Crushed,35,60,9.2532,4297.0035,2.464
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.2623,3246.0993,1.0853
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4508.3931,3.196
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.5032,3257.646,1.626
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5492,3041.537,1.4879
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.0782,3142.2823,1.6005
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4506.0014,3.3084
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.422,3367.2434,1.3326
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.9645,4160.9306,3.1902
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,5.9144,4452.0006,2.4166
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,14.3261,4331.356,5.1036
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,5.9228,4382.6475,2.4814
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.1436,3658.3692,1.9395
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,10.9286,4373.2852,3.7511
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.4479,3008.4401,2.17
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.3959,3396.5627,1.2526
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.1155,4349.5666,3.7512
+CPC 30R,CEMEX,No_additions,Crushed,28,28,10.0294,4635.8805,2.664
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.8905,4385.0101,2.4786
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.2485,4353.2821,3.7513
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.5185,3477.5107,1.5894
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.0965,3151.8731,2.2524
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.3393,4489.8908,2.3872
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.1051,3707.9143,2.0519
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.2777,3939.0018,2.3458
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.3092,3307.7352,1.0911
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.7619,3165.4474,2.251
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3284,3321.303,2.1156
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4293,4424.0747,3.2473
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8654,2440.2989,0.5609
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3672.574,2.2874
+CPC 30R,CEMEX,No_additions,Crushed,28,28,7.2454,4600.6652,2.6752
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4509.1357,3.2193
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.8029,4549.5463,2.9797
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.6432,3581.8153,2.3336
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.7539,4663.5931,3.3977
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.299,3443.7338,2.0789
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.4978,3223.5122,2.0703
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2832,3469.4793,1.5894
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.2925,4534.4692,2.8604
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.6781,3733.8289,2.1387
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4292.9557,3.5069
+CPC 30R,CEMEX,No_additions,Crushed,28,28,6.5399,4481.9317,2.6731
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6578,3035.7858,1.4996
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.5005,3184.0039,1.0889
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4291.255,3.5069
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.1531,3318.0849,1.6256
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3209.5242,1.5896
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3590.631,2.2678
+CPC 30R,CEMEX,No_additions,Crushed,28,28,8.1976,4613.1905,2.677
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1564,3530.9018,2.3511
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.4041,3311.1785,1.594
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.6056,3489.3651,2.2741
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5644,3001.9783,1.4696
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.1499,4271.4969,3.5993
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5806,2998.8188,1.4601
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3244.0571,1.5902
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.9591,4190.0319,4.53
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.5446,4351.0067,3.752
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.4196,4410.6001,2.6194
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4505.3644,3.436
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2832,3407.3864,1.5894
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,5.9966,3204.8037,1.2274
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.1612,4370.9636,2.5171
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8514,2633.3553,0.54
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5944,2955.0991,1.4617
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,3.931,3422.686,1.3712
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,4.9862,4329.7154,2.6357
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.9032,3464.6728,1.5894
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.5541,3422.45,1.461
+CPC 30R,CEMEX,No_additions,Crushed,28,28,8.9597,4581.497,2.6554
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5735,3041.1356,1.4879
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.091,3539.2088,2.354
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.385,3310.3831,2.1175
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.7503,3406.2344,2.0677
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.3464,4368.717,5.1036
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.6635,4279.5899,2.3373
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.1823,4346.126,3.7514
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.3917,4222.0158,3.5166
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.0495,4444.6462,2.5323
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,5.8915,4421.2911,2.357
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.2821,3151.5201,2.222
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,6.0709,3344.4392,2.0984
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4514.5848,3.4042
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.5045,3056.6,1.1049
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3614.9115,2.2115
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2832,3506.7152,1.5894
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.4456,4246.9598,3.4431
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.1737,3522.138,1.5341
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.6651,4357.1688,2.3022
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.2797,4374.4835,2.6662
+CPC 30R,CEMEX,No_additions,Crushed,28,28,6.1345,4485.9336,2.7384
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,4.8182,3699.3863,2.1343
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.8194,4521.0382,2.9993
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.4856,4249.7345,3.4816
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.7968,4312.3021,2.9062
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.4403,3849.7745,2.3558
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5442,3042.2499,1.4879
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4287.9744,3.5121
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.0686,4536.132,2.8242
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3014,3461.282,2.1592
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.8778,4493.6055,3.3382
+CPC 30R,CEMEX,No_additions,Recycled,28,28,7.073,4314.7735,2.8922
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.1638,4372.4232,2.6113
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4286.3886,3.5253
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3394.5031,2.2231
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.8748,4184.8064,4.5221
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.2129,4356.5875,2.5395
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.3863,4429.6486,2.67
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.2832,4296.0057,2.8798
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,13.5311,4490.4293,3.0502
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2832,3661.6825,1.8838
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.7011,3851.615,2.3321
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.503,3456.5257,2.0681
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.5162,4333.6633,2.5458
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.86,4139.7583,3.1902
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,6.0169,4494.0,2.9124
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,10.8555,4361.0269,3.7511
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4296.8384,3.4931
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.1462,4387.4269,2.5681
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4297.443,3.5071
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.4317,4545.5601,2.8148
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.301,4391.5713,5.1067
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.9212,4379.7953,5.1036
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.332,4664.3634,3.2642
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.6677,4184.8699,4.5167
+CPC 30R,CEMEX,No_additions,Crushed,28,28,3.0152,4578.8887,2.6554
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.4152,4352.2714,3.7507
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.0686,3537.3984,2.3575
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.2114,3276.9299,1.3067
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3225.7392,1.5399
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.7436,3409.7203,2.2741
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.4978,3314.8579,2.0955
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.5898,3373.156,1.2838
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.0686,4551.6357,2.8723
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.1345,4458.1997,2.4364
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.5264,4241.1756,3.4691
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4302.2934,3.5219
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7124,4358.7149,2.285
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4494.9272,3.3297
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.084,3181.0328,2.2606
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.7239,3398.5763,2.2741
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.3033,4448.3703,2.3266
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6504,2948.593,1.4553
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.2747,3267.8915,1.1001
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.6955,3143.467,2.1059
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,9.0553,4047.5802,3.1902
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.1253,4225.2735,3.536
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8262,2557.27,0.5386
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,12.5664,4658.6231,3.4306
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.8869,4332.8362,5.267
+CPC 30R,CEMEX,No_additions,Crushed,28,28,5.8071,4505.256,2.9764
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,14.0723,4321.8464,5.208
+CPC 30R,CEMEX,No_additions,Crushed,28,28,6.759,4513.6516,2.7087
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.3058,4434.3569,3.2943
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8315,2503.4245,0.558
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,4.992,4365.1789,2.6381
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,10.8579,4377.1366,3.7511
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,9.1707,4024.4033,3.1902
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.247,3657.8093,1.9609
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.3993,3387.8469,1.4888
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8135,2504.8905,0.5408
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.3379,3404.6036,1.3941
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,3.9988,4450.5124,2.4477
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.215,4419.1154,2.3789
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.1051,4326.1752,2.6231
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2765,3085.0422,1.558
+CPC 30R,CEMEX,No_additions,Crushed,28,28,7.3888,4490.5768,2.7054
+CPC 40R,Apasco,fluidizer,Crushed,35,40,7.9659,3878.1402,2.3547
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.6447,3348.5929,1.5559
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.6327,4275.7988,2.3035
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.4021,4398.0165,2.767
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.5015,3216.0054,1.1047
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,14.066,4374.4976,5.166
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.5028,3072.2444,1.0973
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4303.2948,3.5045
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.3941,4420.4568,2.67
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.8523,3731.7078,2.0781
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.2677,3417.045,2.0985
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3274,3484.861,2.2741
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3666.6466,2.3332
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.4677,4260.6911,3.4816
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.2302,4390.517,2.5577
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3546,3401.4004,2.1323
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.7533,2992.1687,1.4641
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.4613,4585.9257,2.9108
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2832,3360.6261,1.5894
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.5774,4278.9487,3.4563
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.1903,4393.9936,2.5479
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.0396,3698.4734,2.1246
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.066,4231.5839,4.5277
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.0617,3145.8089,2.2414
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.4613,4540.2173,2.875
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3092.971,1.5384
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.421,3149.3377,2.2414
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.242,4458.794,2.5293
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.1142,3170.5714,2.2563
+CPC 30R,CEMEX,No_additions,Crushed,28,28,6.7936,4485.7229,2.9438
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6132,2993.1492,1.4584
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,5.9319,4386.7024,2.3565
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.6405,4184.6741,4.5169
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.1234,4333.1819,5.1092
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3534.291,2.3508
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2806,3520.3217,1.5423
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.2015,4437.245,2.5279
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.1393,3372.3206,2.1175
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.2525,4411.9561,2.39
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.9736,4353.3256,5.257
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.2014,4441.3603,2.67
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.2327,4207.4943,4.5295
+CPC 30R,CEMEX,No_additions,Crushed,28,28,10.1421,4633.0988,2.6644
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1367,3539.5786,2.3511
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.1064,3530.5117,2.232
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.7618,3001.8836,1.4595
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.9827,4330.1491,4.9147
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.1718,4396.3828,2.67
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,10.8406,4371.7364,3.7511
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.8905,3470.6197,2.1409
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.9591,4199.5675,4.5411
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.574,3334.3115,1.357
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,6.0207,4564.3303,2.8735
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.429,4342.0028,2.3266
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.4613,4568.2462,2.8704
+CPC 30R,CEMEX,No_additions,Recycled,28,28,7.0104,4310.3937,2.8633
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.541,2980.3472,1.4805
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3581,3307.0726,2.0886
+CPC 30R,CEMEX,No_additions,Crushed,28,28,6.6759,4508.665,2.9239
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.9591,4192.758,4.5348
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,5.9557,4411.6956,2.4839
+CPC 30R,CEMEX,No_additions,Crushed,28,28,7.2931,4512.9121,2.8859
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.4882,2991.2821,2.0644
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3014,3478.7985,2.0777
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.1088,3168.6012,2.2561
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,6.1442,4565.0614,2.9032
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.2335,3615.647,2.2588
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.6238,4395.281,5.1688
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.6885,4273.554,2.3394
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.621,3663.8064,2.3332
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,12.5664,4658.3024,3.4306
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.1648,3574.3877,2.2602
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6535,2995.9912,1.4635
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.5006,3380.585,1.5453
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2832,3658.9837,1.9828
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.405,4340.0414,2.6039
+CPC 30R,CEMEX,No_additions,Crushed,28,28,5.8281,4478.6523,3.0187
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.1663,3346.9975,1.2144
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3014,3471.3399,2.1425
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7057,4266.4335,2.3184
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.6838,4287.6516,2.3252
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.2832,4307.1243,2.8694
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.2463,3435.7792,2.1165
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,5.9554,3252.2839,1.2554
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,4.7124,3704.821,2.0629
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.2062,4434.0651,2.67
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.4015,4401.6457,2.519
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3737,3219.448,2.1175
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1141,3526.3305,2.3511
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.1914,4376.6674,2.5247
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.9192,4162.9685,3.1902
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.4403,3355.8726,1.4848
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.3932,4358.0191,3.7517
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3593.7375,2.3082
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.5852,3299.1866,2.1175
+CPC 30R,CEMEX,No_additions,Crushed,28,28,6.6759,4477.9422,2.9239
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.4696,3102.3127,1.0944
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8881,2451.2197,0.558
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.9,2430.1131,0.538
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,10.9586,4371.8711,3.7511
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.0085,3917.9122,2.3563
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.7294,4348.7473,2.5913
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.51,4497.0159,3.3025
+CPC 40R,Apasco,fluidizer,Crushed,35,40,7.9596,3912.2174,2.3513
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,13.2212,4490.1296,3.0647
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.3198,4490.6806,2.3911
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.1068,3656.3511,1.9921
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.1921,4374.0733,2.4143
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.0814,3047.3759,2.0631
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.6515,2991.6183,2.0985
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.5823,4433.4536,2.5149
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.2831,3399.0447,2.0932
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.6912,3466.0169,2.2741
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.7044,3153.8583,2.2406
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,5.8905,3660.2381,1.9871
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.4993,3010.41,1.1089
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.9591,4185.2934,4.5375
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.1845,4374.9412,2.6214
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.4613,4556.4482,2.9041
+CPC 30R,CEMEX,No_additions,Crushed,28,28,9.816,4557.1591,2.7176
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.2442,3142.123,2.2371
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.4134,4380.3793,2.5777
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.3998,4499.1394,3.2818
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.9341,4216.6093,4.541
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.2423,4340.2304,2.5797
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5676,3041.3403,1.4879
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.1875,4552.7831,2.8688
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.5089,4384.8957,3.752
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.7582,4500.2659,3.2495
+CPC 30R,CEMEX,No_additions,Crushed,28,28,4.731,4580.7001,2.6554
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.8772,3151.7267,2.2414
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4504.277,3.2705
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.809,4497.7503,3.0016
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.0038,4346.8022,2.7134
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.7084,4477.4837,2.3911
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.1355,3658.2214,1.9611
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.8548,3371.1306,2.2741
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.301,3403.4546,1.5174
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.4035,4414.0009,2.3266
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.2115,3171.2421,2.2202
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.2359,4348.6666,2.3556
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.8462,4601.8118,3.2789
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4295.873,3.4961
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.7183,4342.6118,5.2294
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4515.967,3.221
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.2102,4533.3473,3.1508
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.4987,3136.4412,1.0784
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,6.1423,4504.6442,2.8612
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.6512,4500.0518,3.2495
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6744,2957.9305,1.5011
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.8905,4381.1996,2.4083
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.137,3659.1627,1.9596
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.0089,4389.2473,2.5686
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.9799,3457.1515,1.5862
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.9,2430.3067,0.5381
+CPC 30R,CEMEX,No_additions,Recycled,28,28,7.1455,4328.4621,2.898
+CPC 30R,CEMEX,No_additions,Crushed,28,28,6.191,4503.9104,2.7809
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.0384,3295.3306,1.2338
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,4.8282,3699.9494,2.1417
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4165,4434.731,3.2943
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.7166,3209.0825,1.2584
+CPC 30R,CEMEX,No_additions,Crushed,28,28,9.9675,4582.7053,2.6475
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.587,4334.625,2.4235
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.8002,3392.7999,2.2741
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2832,3659.855,1.9175
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.3822,4373.2621,2.5767
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3668.2769,2.2889
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.2908,4375.026,2.3266
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.8285,4127.1096,3.1841
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5634,3042.8678,1.4879
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.0563,4238.25,3.607
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.4411,3294.4163,2.1175
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.0774,4435.3003,2.3634
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.1927,4493.7855,2.2474
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.0979,4513.8876,2.4392
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.9,2618.7186,0.5393
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5539,2951.6879,1.5069
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.3862,4495.556,2.8604
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.1051,4327.6567,2.6231
+CPC 30R,CEMEX,No_additions,Crushed,28,28,5.6476,4473.2756,3.0191
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.4518,4431.6854,2.5811
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.8905,3473.2027,2.1059
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.6249,3303.7696,1.2875
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.444,4448.8134,2.5038
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.7025,3042.6673,1.4879
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.4635,3376.3324,2.0653
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.6098,3207.385,1.2056
+CPC 40R,Apasco,fluidizer,Crushed,35,60,9.3666,4228.6987,2.4465
+CPC 30R,CEMEX,No_additions,Recycled,28,28,7.1637,4296.733,2.883
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.398,3364.2867,1.4463
+CPC 30R,CEMEX,No_additions,Crushed,28,28,9.5429,4574.1464,2.7526
+CPC 40R,Apasco,fluidizer,Crushed,35,60,9.267,4244.5533,2.4492
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.7277,4323.7355,2.363
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.7232,4184.9342,4.5208
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8649,2401.6052,0.558
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3669.1072,2.328
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.2188,4440.5025,2.4618
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.0701,4364.3969,2.7195
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.2832,4304.0816,2.8724
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.1721,3520.9971,1.5406
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2832,3376.9723,1.5894
+CPC 30R,CEMEX,No_additions,Crushed,28,28,5.8316,4501.9308,2.9421
+CPC 40R,Apasco,fluidizer,Crushed,35,60,8.6514,4237.5777,2.455
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,12.5664,4655.5566,3.4306
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.7639,3026.8155,1.5115
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.4845,4664.3556,3.3683
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.185,3379.0221,2.0604
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.6386,3455.7013,1.5811
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.5393,3195.5437,2.1175
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.628,3041.2112,1.4879
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.2542,3287.3487,1.0955
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,12.5664,4652.6409,3.4306
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.0028,3208.3708,1.2236
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8278,2415.8847,0.5594
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6623,2973.1057,1.4877
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.9162,4077.2767,3.1926
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.8074,3892.1437,2.3492
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4284.4153,3.5132
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.1051,4326.517,2.6231
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.5025,4379.4992,3.7516
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,12.9283,4382.1469,5.1036
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.8905,3470.8762,2.1127
+CPC 30R,CEMEX,No_additions,Crushed,28,28,8.2641,4579.0604,2.6554
+CPC 40R,Apasco,fluidizer,Crushed,35,60,9.1262,4238.3348,2.4543
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,12.9591,4499.9363,3.0806
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.6388,4509.6203,3.2495
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.8734,3236.8668,1.2997
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.7852,4344.8514,2.5138
+CPC 40R,Apasco,fluidizer,Crushed,35,60,9.0778,4230.2741,2.4555
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.9466,4301.0986,2.8717
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.5884,3003.3571,2.1376
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3965,3747.5273,2.2153
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.8621,4138.4837,3.1902
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.1331,3517.4453,1.539
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5858,3000.9866,1.4924
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.8678,4258.4678,3.543
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,12.9591,4496.2799,3.0444
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.1501,3659.325,1.9737
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.7346,4492.1864,2.9444
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.0528,3520.2839,1.5321
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.1319,4240.5714,4.5277
+CPC 30R,CEMEX,No_additions,Crushed,28,28,8.7024,4577.7142,2.6658
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8736,2546.9795,0.5417
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7233,4264.0,2.3183
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.8991,2576.4773,0.543
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,4.9556,4363.7428,2.6726
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,4.7124,3779.9829,2.1253
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.6736,2991.6436,2.1269
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4289.2894,3.533
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,3.9846,3383.0004,2.2644
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.1051,3698.7484,2.0115
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.3197,3572.8028,2.2464
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2832,3488.6485,1.5894
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.1228,3363.6208,2.2519
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.8402,4626.7639,3.4684
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.8905,3451.7973,2.0743
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.9,2655.9265,0.5496
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6969,2949.5432,1.4547
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.8063,4546.8295,2.9917
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.2882,3257.9732,1.0982
+CPC 40R,Apasco,fluidizer,Crushed,35,60,8.8445,4236.1217,2.4538
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.1901,3415.224,2.0788
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3163.7337,1.5372
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.6041,3337.3581,1.2778
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.3585,4363.8431,2.3266
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.801,3302.4822,1.3011
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.3539,4416.4109,2.3266
+CPC 40R,Apasco,fluidizer,Crushed,35,60,9.2897,4313.9504,2.451
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.8905,3454.0211,2.1402
+CPC 30R,CEMEX,No_additions,Crushed,28,28,8.3077,4587.6988,2.6741
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.099,3539.5213,2.3583
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.3372,3309.059,1.086
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3118,3419.2443,2.1025
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.7462,4544.428,2.9989
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7124,4357.1917,2.285
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.8431,4636.2648,3.3955
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.1435,3162.3671,2.2562
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.4613,4572.677,2.8948
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,12.6806,4598.0,3.6063
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.5872,4249.1979,3.4816
+CPC 30R,CEMEX,No_additions,Crushed,28,28,9.8327,4611.7829,2.6755
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.1093,3656.6838,1.9854
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,12.9591,4495.8361,3.0531
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.5218,4503.8133,3.2887
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4293.0944,3.5069
+CPC 30R,CEMEX,No_additions,Crushed,28,28,9.5232,4546.402,2.8573
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.4303,3536.8435,2.2797
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.8416,4321.4088,2.596
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.5091,3243.1021,1.2027
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4290.8804,3.5069
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.0146,4511.5152,2.3911
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.2857,4329.0,2.8864
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4465.1354,3.2648
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.1855,3298.9111,1.2426
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,12.9834,4349.6747,5.1147
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,9.1312,4236.4186,3.5102
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6725,3041.3881,1.4879
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3014,3496.6293,2.1256
+CPC 30R,CEMEX,No_additions,Recycled,28,28,7.1748,4294.4209,2.8901
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.6562,3387.063,1.372
+CPC 30R,CEMEX,No_additions,Crushed,28,28,8.3128,4577.9792,2.6554
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.242,3538.2535,2.258
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.3556,4427.2265,3.2943
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.3127,3426.0232,1.3943
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.4581,4350.4177,2.4525
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.8066,3177.7797,2.2284
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.2832,4305.497,2.8755
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.8268,3448.7931,2.2741
+CPC 30R,CEMEX,No_additions,Recycled,28,28,6.5023,4329.0,2.8864
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.673,4662.479,3.3792
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.2237,3658.1337,1.9696
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.9591,4191.209,4.5363
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.9591,4185.731,4.5302
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.6589,4356.6274,3.7505
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.7261,3310.6683,1.3123
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.2265,4373.1889,2.638
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3238.0274,1.626
+CPC 40R,Apasco,No_additions,Crushed,35,40,3.9897,3126.4941,2.0631
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.409,3018.4985,2.1597
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.4571,3048.1718,2.1517
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4309.3368,3.5287
+CPC 30R,CEMEX,No_additions,Recycled,28,28,7.1586,4351.4528,2.8878
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.6105,3398.8107,1.3156
+CPC 40R,Apasco,No_additions,Crushed,35,60,7.1338,3151.8485,2.2522
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,12.5664,4657.5238,3.4306
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2585,3410.958,1.5408
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.9064,4518.2408,2.8561
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.9372,4551.1833,2.8837
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.2498,3174.4264,2.2348
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.4613,4539.084,2.9013
+CPC 30R,CEMEX,No_additions,Crushed,28,28,10.1573,4579.0076,2.6554
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.0686,4548.2408,2.9003
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.8362,4526.4175,2.997
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.6867,3729.1348,2.2331
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.695,4264.2676,2.3184
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.1051,3720.519,2.0
+CPC 30R,CEMEX,No_additions,Recycled,28,14,5.7853,4393.3167,2.4816
+CPC 30R,CEMEX,No_additions,Recycled,28,28,7.1203,4341.6469,2.8648
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.1051,4326.1274,2.6231
+CPC 40R,Apasco,No_additions,Crushed,35,60,6.5798,3147.3735,2.2414
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.6519,4272.0111,2.3441
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.9784,4156.1423,3.1902
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3531.9886,2.3473
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6769,2954.1635,1.4576
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7368,4264.0,2.3183
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.1216,4406.509,2.4495
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.1051,4327.7506,2.6231
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,90,11.4949,4369.4687,3.7504
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.4966,3141.3833,1.0857
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,7,5.0582,4342.8799,2.7185
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.5498,3421.5628,1.389
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.8905,3478.4539,2.104
+CPC 40R,Apasco,fluidizer,Crushed,35,60,9.1276,4259.8274,2.4554
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.1051,3735.2812,2.1056
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.018,3852.6681,2.332
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,5.8905,3658.3966,1.9563
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.1051,3703.7127,2.0387
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,60,10.1258,4239.1708,3.5563
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.8347,4478.6992,2.9581
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6179,3016.0836,1.5121
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.1021,3515.3603,1.5407
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.0387,4470.8484,2.4685
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.3014,3465.2862,2.0986
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,6.2857,4499.1642,2.8596
+CPC 30R,CEMEX,No_additions,Crushed,28,28,8.5112,4627.3118,2.6757
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.7762,4565.8814,3.0008
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.9154,3207.0435,1.6339
+CPC 40R,Apasco,No_additions,Crushed,35,120,16.1007,3533.3246,2.3452
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.4102,3452.0069,2.2741
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,120,13.8067,4328.6258,4.9837
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.3385,4387.6806,2.6969
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.832,3412.0863,2.0622
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.7701,4490.5461,3.3014
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.2831,4518.4702,2.8604
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,28,5.864,3435.3259,2.073
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.4018,4421.2463,2.8505
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6721,3027.1016,1.4982
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,28,7.1464,4525.4841,2.8604
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.2832,3390.9764,1.5894
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.4805,3704.0565,2.2983
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6223,3041.2472,1.4879
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,6.0827,3518.1134,1.539
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.2719,3414.8575,1.3398
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.2368,4377.2415,2.743
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.8307,4184.8696,4.5177
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.8905,3197.0328,1.5721
+CPC 30R,CEMEX,No_additions,Crushed,28,14,5.5937,4347.5944,2.5149
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,40,4.6237,3692.5513,2.2389
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.9591,4191.9706,4.5329
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,5.9221,4389.9765,2.4064
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.5962,3301.7694,1.2961
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.9015,3486.0564,1.5894
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,14,5.9266,4494.0,2.9124
+CPC 30R,CEMEX,No_additions,Crushed,28,28,6.9936,4555.6425,2.9986
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.2795,4329.0575,2.3646
+CPC 40R,Apasco,fluidizer,Crushed,35,40,7.9828,3862.0875,2.3523
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.7124,4357.6865,2.285
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,90,13.7717,4646.5108,3.4325
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,7.0589,3201.5264,1.2742
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.3148,3309.9641,1.0773
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,3,5.9035,2419.3565,0.5619
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4306.729,3.4958
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.2119,4446.3535,2.2794
+CPC 40R,Apasco,fluidizer,Crushed,35,90,10.9956,4294.5289,3.5069
+CPC 40R,Apasco,Starch_fluidizer,Crushed,35,40,8.6971,4087.1017,3.1853
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,14,5.9091,3510.1825,1.5894
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.2848,3741.5257,2.1083
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,28,6.021,3656.9728,1.9857
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,14,6.4662,3258.7292,1.2806
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.5512,3854.8583,2.337
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,5.9572,4415.9252,2.2777
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.1051,3714.2986,2.0045
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.0659,3318.4189,1.5324
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.2102,4558.6543,3.1798
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,7,4.6374,3392.5057,1.3609
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5637,3005.3916,1.503
+CPC 40R,Apasco,fluidizer,Crushed,35,120,12.7021,4184.6281,4.5236
+CPC 40R,Apasco,fluidizer,Crushed,35,60,8.6329,4242.5547,2.4557
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.1051,3723.8284,2.0241
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,3,3.5076,3065.7981,1.0961
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4597,4457.5415,3.2264
+CPC 40R,Apasco,No_additions,Crushed,35,40,4.2732,3277.3165,2.0605
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.7469,4468.9151,2.3911
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.6728,3041.3631,1.4879
+CPC 30R,CEMEX,No_additions,Recycled,28,90,10.2102,4549.0159,3.159
+CPC 30R,CEMEX,No_additions,Recycled,28,7,4.6702,4266.686,2.3236
+CPC 30R,CEMEX,No_additions,Crushed,28,28,6.6759,4503.2614,2.9239
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,90,12.9591,4502.4468,3.0819
+CPO 30R RS BRA,CEMEX,No_additions,Rounded,25,40,5.1051,3701.5752,1.9968
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,28,7.4613,4510.1225,3.2421
+CPC 40R,Apasco,fluidizer,Crushed,35,40,8.6968,3845.5823,2.324
+CPC 30R,CEMEX,No_additions,Crushed,28,7,4.4607,4428.9987,2.5357
+CPO 30R RS BRA,CEMEX,Opuntia_ficus_indica,Rounded,25,7,3.5991,2975.4119,1.475
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Crushed,28,7,4.8211,4495.6321,2.3911
+CPC 30R,CEMEX,Blast_furnace_slag_10%,Recycled,28,14,6.0289,4371.989,2.4164

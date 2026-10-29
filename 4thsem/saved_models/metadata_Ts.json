@@ -1,0 +1,21 @@
+{
+    "target_key": "Ts",
+    "target_column": "Ts_Mpa",
+    "target_description": "Tensile Strength (Ts_Mpa)",
+    "best_model_name": "LightGBM",
+    "best_parameters": {
+        "regressor__colsample_bytree": "0.8",
+        "regressor__learning_rate": "0.05",
+        "regressor__num_leaves": "31",
+        "regressor__subsample": "0.8"
+    },
+    "test_metrics": {
+        "R2": 0.9972723401462024,
+        "Adj_R2": 0.9972511338499629,
+        "MAE": 0.029071365130654937,
+        "RMSE": 0.04699482770868039,
+        "MSE": 0.002208513831368554
+    },
+    "cv_score": 0.9968601449804758,
+    "pipeline_file": "best_pipeline_Ts.pkl"
+}

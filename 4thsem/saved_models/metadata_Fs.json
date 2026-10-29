@@ -1,0 +1,21 @@
+{
+    "target_key": "Fs",
+    "target_column": "Fs_Mpa",
+    "target_description": "Flexural Strength (Fs_Mpa)",
+    "best_model_name": "XGBoost",
+    "best_parameters": {
+        "regressor__colsample_bytree": "0.8",
+        "regressor__learning_rate": "0.05",
+        "regressor__max_depth": "4",
+        "regressor__subsample": "1.0"
+    },
+    "test_metrics": {
+        "R2": 0.9996300988776252,
+        "Adj_R2": 0.9996243971262206,
+        "MAE": 0.02377462423425733,
+        "RMSE": 0.04557710831479442,
+        "MSE": 0.0020772728023385023
+    },
+    "cv_score": 0.9995342322925389,
+    "pipeline_file": "best_pipeline_Fs.pkl"
+}

@@ -1,0 +1,105 @@
+{
+    "target_key": "Fs",
+    "target_column": "Fs_Mpa",
+    "target_description": "Flexural Strength (Fs_Mpa)",
+    "models": {
+        "ridge": {
+            "model_name": "Ridge Regression",
+            "pipeline_file": "ridge_pipeline.pkl",
+            "best_parameters": {
+                "regressor__alpha": "0.01"
+            },
+            "cv_score": 0.9863958500187611,
+            "test_metrics": {
+                "R2": 0.9865195128196305,
+                "Adj_R2": 0.9863117211097211,
+                "MAE": 0.1991706641737808,
+                "RMSE": 0.2751419030517229,
+                "MSE": 0.0757030668149237
+            },
+            "fit_time_seconds": 9.83
+        },
+        "naive_bayes": {
+            "model_name": "Naive Bayes",
+            "pipeline_file": "naive_bayes_pipeline.pkl",
+            "best_parameters": {
+                "n_bins": "20"
+            },
+            "cv_score": 0.9727143460619814,
+            "test_metrics": {
+                "R2": 0.9674260360406638,
+                "Adj_R2": 0.9669239325499611,
+                "MAE": 0.13111988636363633,
+                "RMSE": 0.4276999984612018,
+                "MSE": 0.18292728868371202
+            },
+            "fit_time_seconds": 0.05
+        },
+        "xgboost": {
+            "model_name": "XGBoost",
+            "pipeline_file": "xgboost_pipeline.pkl",
+            "best_parameters": {
+                "regressor__colsample_bytree": "0.8",
+                "regressor__learning_rate": "0.05",
+                "regressor__max_depth": "4",
+                "regressor__subsample": "1.0"
+            },
+            "cv_score": 0.9995342322925389,
+            "test_metrics": {
+                "R2": 0.9996300988776252,
+                "Adj_R2": 0.9996243971262206,
+                "MAE": 0.02377462423425733,
+                "RMSE": 0.04557710831479442,
+                "MSE": 0.0020772728023385023
+            },
+            "fit_time_seconds": 1.55
+        },
+        "lightgbm": {
+            "model_name": "LightGBM",
+            "pipeline_file": "lightgbm_pipeline.pkl",
+            "best_parameters": {
+                "regressor__colsample_bytree": "0.8",
+                "regressor__learning_rate": "0.1",
+                "regressor__num_leaves": "63",
+                "regressor__subsample": "1.0"
+            },
+            "cv_score": 0.9994959451594945,
+            "test_metrics": {
+                "R2": 0.9995774430001205,
+                "Adj_R2": 0.9995709295974249,
+                "MAE": 0.02597410600477288,
+                "RMSE": 0.04871319254777187,
+                "MSE": 0.0023729751281962967
+            },
+            "fit_time_seconds": 9.21
+        },
+        "ann": {
+            "model_name": "ANN (PyTorch)",
+            "pipeline_file": "ann_pipeline.pkl",
+            "best_parameters": {
+                "H": "256",
+                "dropout_p": "0.2"
+            },
+            "cv_score": 0.9989904411249269,
+            "test_metrics": {
+                "R2": 0.9991430920455892,
+                "Adj_R2": 0.9991298834451358,
+                "MAE": 0.05505492803300874,
+                "RMSE": 0.0693698938700544,
+                "MSE": 0.0048121821755426125
+            },
+            "fit_time_seconds": 77.76
+        }
+    },
+    "best_overall_model": {
+        "model_name": "XGBoost",
+        "pipeline_file": "best_overall_model.pkl",
+        "metrics": {
+            "R2": 0.9996300988776252,
+            "Adj_R2": 0.9996243971262206,
+            "MAE": 0.02377462423425733,
+            "RMSE": 0.04557710831479442,
+            "MSE": 0.0020772728023385023
+        }
+    }
+}

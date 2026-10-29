@@ -1,0 +1,522 @@
+=== PAGE 1 ===
+Intelligent 3DCP: Mechanical Strength Prediction
+Using ML
+Jeetu Kumar
+Department of Information Technology (Artificial Intelligence)
+National Institute of Technology Karnataka, Surathkal
+Mangalore, India
+jeetumodi.241ai018@nitk.edu.in
+Sagar Hiremath
+Department of Information Technology
+National Institute of Technology Karnataka, Surathkal
+Mangalore, India
+sagarhiremath.241it067@nitk.edu.in
+Abstract—3D Concrete Printing (3DCP) is an emerging ad-
+ditive manufacturing technology that enables automated, layer-
+by-layer construction of complex concrete structures, reducing
+labour, material waste, and construction time. Despite its poten-
+tial, 3DCP faces critical challenges related to process control and
+long-term durability. This study focuses on developing a real-time
+machine learning-based system to predict mechanical strength
+(compressive, tensile, and flexural) from material composition
+and process parameters. A suite of supervised learning algorithms
+— Ridge Regression, Naive Bayes Regressor, XGBoost, Light-
+GBM, and a PyTorch Artificial Neural Network — is trained and
+evaluated using the ConcreteXAI dataset. The proposed pipeline
+further includes a web-based interface that accepts CSV/Excel
+input and returns strength predictions in real time. By integrating
+experimental observations with predictive modelling and adaptive
+control, the framework aims to enhance the reliability, structural
+performance, and efficiency of 3DCP.
+Index Terms—3D Concrete Printing, Additive Manufacturing,
+Machine Learning, Mechanical Strength Prediction, XGBoost,
+Artificial Neural Networks
+I. INTRODUCTION
+Concrete is the most widely used construction material in
+the world, forming the backbone of modern infrastructure.
+Despite its ubiquity, conventional construction methods remain
+labour-intensive, reliant on formwork, and prone to human
+error. In recent years, 3D Concrete Printing (3DCP) has
+emerged as a paradigm-shifting technology that fabricates
+structures layer by layer through controlled extrusion of a
+cementitious material, eliminating formwork and enabling
+complex geometries that are impractical through conventional
+casting.
+Research has demonstrated that 3DCP can potentially re-
+duce overall construction costs by 50%–60% while improving
+sustainability by optimising material use and reducing carbon
+footprint. Realising these benefits, however, requires a thor-
+ough understanding of the interplay between material science,
+mechanical design, and process control.
+During a visit to the 3DCP Laboratory at the National Insti-
+tute of Technology Karnataka (NITK), Surathkal, we observed
+the complete working mechanism of a large-scale 3D concrete
+printer (Fig. 1). The visit provided insights into rheological
+behaviour of the printable mix, bonding strength between
+layers, and the influence of environmental conditions. One
+of the major challenges observed is developing an ideal mix
+design that simultaneously satisfies pumpability, extrudability,
+and buildability — requiring fine-tuning of admixtures and
+real-time process control.
+In this context, the present study focuses on developing a
+supervised machine learning pipeline to predict mechanical
+strength from composition and process data, deployable as a
+web application.
+Fig. 1. 3D Concrete Printer at NITK Surathkal 3DCP Laboratory.
+II. BACKGROUND
+The conventional construction industry faces persistent chal-
+lenges including low labour efficiency, high accident rates, a
+diminishing skilled workforce, and rising costs from formwork
+— a necessary but wasteful step in traditional concrete cast-
+ing [1]. 3DCP has emerged as a solution, leveraging digital
+fabrication to automate construction processes [2].
+The foundational work was pioneered by Behrokh Khosh-
+nevis at the University of Southern California through Contour
+Crafting — a large-scale, on-site extrusion-based method for
+rapid building construction [3]. A key innovation was the
+integration of robotic trowels adjacent to the extrusion nozzle
+to produce smooth, paint-ready surfaces while embedding
+conduits for electrical and plumbing services.
+
+=== PAGE 2 ===
+Fig. 2. 3D Concrete Printing workflow — from digital model to deposited
+layer.
+III. LITERATUREREVIEW
+The application of machine learning (ML) to 3DCP is a
+burgeoning field. Predictive modelling has shown significant
+promise in optimising mix designs and forecasting mechanical
+performance, reducing the need for time-consuming experi-
+mental trials [5].
+Ali et al. [1] developed Support Vector Machine (SVM) and
+XGBoost Regression models to predict flexural and tensile
+strength of 3D-printed concrete from mix design parame-
+ters (water-to-binder ratio, cement content, fibre properties),
+demonstrating high predictive accuracy and establishing a
+precedent for ML-driven mix design optimisation.
+Building on this, Zhang et al. [2] employed random forests
+and artificial neural networks to predict mechanical properties,
+achieving high correlation coefficients. More recent work
+has extended these approaches to predict interlayer bonding
+strength using advanced ensemble methods such as stacking
+models [4].
+While these studies provide a robust framework for predict-
+ing final mechanical strength from initial mix proportions, a
+significant gap remains in real-time prediction deployable as a
+user-facing tool. The existing literature has not fully addressed
+end-to-end pipelines combining multi-model comparison, hy-
+perparameter optimisation, and web-based deployment. This
+study bridges that gap by providing an open prediction inter-
+face for practitioners.
+A. Problem Statement
+To develop AI-based predictive models that analyse material
+composition and process parameters to predict mechanical
+strength (compressive, tensile, and flexural) of 3DCP struc-
+tures, and to deploy these models as a web application that
+accepts user-uploaded CSV/Excel data.
+B. Objectives
+1) Detailed study of parameters and features required for
+predicting mechanical strength in 3DCP structures.
+2) Data collection, exploratory data analysis, and design of
+a preprocessing pipeline.
+3) Training and comparison of multiple supervised learning
+algorithms: Ridge Regression, Naive Bayes Regressor,
+XGBoost, LightGBM, and ANN.
+4) Evaluating model performance using R 2, MAE, and
+RMSE, and selecting the best model per strength target.
+5) Deploying the trained models as a web application that
+accepts CSV/Excel files and returns predictions in real
+time.
+IV. PROPOSEDMETHODOLOGY
+Fig. 3 depicts the overall proposed workflow. The method-
+ology comprises four main stages: Dataset Collection, Feature
+Engineering, Model Design, and Web Deployment.
+Fig. 3. Proposed machine learning pipeline for mechanical strength prediction.
+A. Dataset Collection and Description
+The dataset utilised in this study is the publicly avail-
+ableConcreteXAIdataset, encompassing evaluations of both
+mechanical performances and non-destructive tests [6]. It
+incorporates 18,480 continuous data points, derived from an
+extensive 10-year laboratory investigation into concrete mate-
+rials.
+The dataset is structured across eleven columns. It includes
+4,420 instances for tests such as Compressive strength (Cs),
+Electrical resistivity (Er), and Ultrasonic pulse velocity (UPV).
+Due to the complexity of fabricating specific prismatic and
+cylindrical specimens, the dataset contains 3,460 values for
+Tensile strength (Ts) and 1,760 values for Flexural strength
+(Fs) [6].
+The columns are categorised into categorical and numerical
+variables. The categorical features include:
+•Type of cement:Contains variations such as ‘CPO 30R
+RS BRA’, ‘CPC 40R’, ‘CPC 30R RS’, and ‘CPC 30R’.
+•Brand:Includes ‘CEMEX’ and ‘Apasco’.
+•Additives:Features additions like ‘Op-
+untia ficus indica’, ‘Starch fluidizer’,
+‘Blast furnace slag 10%’, and ‘No additions’.
+•Type of aggregates:Encompasses ‘Rounded’, ‘Crushed’,
+‘V olcanic’, and ‘Recycled’ aggregates.
+
+=== PAGE 3 ===
+The numerical features define the test conditions and out-
+comes:
+•Design F’c:Ranging between 25 and 35 MPa.
+•Curing age:Evaluated at 3, 7, 14, 28, 40, 60, 90, and
+120 days.
+•Compressive strength (Cs):Measured values range from
+5.0823 to 55.7092 MPa.
+•Tensile strength (Ts):Measured values range from
+0.5311 to 5.2720 MPa.
+•Flexural strength (Fs):Measured values range from
+0.3367 to 8.0869 MPa.
+•Electrical resistivity (Er):Non-destructive test values
+ranging from 1.8312 to 16.1693 Ohm-cm. This was
+obtained using a Nilsson resistometer (model 400) em-
+ploying the Wenner method [8].
+•Ultrasonic pulse velocity (UPV):Ranging from
+2345.9812 to 4666.3548 m/s. This was acquired using
+a CONTROLS model E49 electronic device.
+Mechanical tests for determining Cs, Ts, and Fs were con-
+ducted using a Forney Universal Machine [6]. These empirical
+records enable a robust foundation for training the supervised
+machine learning algorithms explored in this framework.
+B. Feature Engineering
+The input features encompass material composition and
+process parameters:
+•Material Composition:Type of cement, cement brand,
+additives, type of aggregates, design compressive target
+f ′c (MPa).
+•Process Parameters:Curing age (days), ambient tem-
+perature, relative humidity.
+•Non-Destructive Test (NDT) Features:Electrical resis-
+tivity (Er,Ω·cm), Ultrasonic Pulse Velocity (UPV , m/s).
+C. Predicted Parameters
+The dependent variables predicted by the models are:
+•Compressive strengthC s (MPa): Load-bearing capacity.
+•Tensile strengthT s (MPa): Interlayer bonding quality.
+•Flexural strengthF s (MPa): Resistance to bending and
+interlayer failure.
+D. Prediction Model Design
+Preprocessing:Categorical features (cement type,
+brand, additives, aggregate type) are encoded with One-
+Hot Encoding; numerical features are standardised with
+StandardScaler. AColumnTransformerwraps both
+steps inside a unifiedsklearnPipeline.
+Model Training:Five supervised learning algorithms are
+trained independently for each of the three strength targets.
+Allsklearn-based models are embedded inside the same
+preprocessingPipelineso that feature encoding and scaling
+are always fitted only on training data and applied consistently
+to validation and test splits. Hyperparameter selection uses
+5-fold cross-validation scored by R 2. The best estimator is
+then refitted on the full 70% training partition before final
+evaluation on the held-out 30% test set.
+Evaluation Metrics:Every model is assessed with four
+complementary metrics on the test split:
+•RMSE(Root Mean Square Error) — penalises large
+deviations heavily, reported in the same units as the target
+(MPa).
+•MAE(Mean Absolute Error) — robust average absolute
+deviation, easier to interpret in engineering practice.
+•R 2 (Coefficient of Determination) — proportion of vari-
+ance explained; values closer to 1 indicate a better fit.
+•AdjustedR 2 — penalises unnecessary predictors, com-
+puted as1− (1−R2)(n−1)n−p−1 wherenis the sample size and
+pis the number of features.
+Web Deployment:The best-performing pipeline per target
+is serialised withpickleand exposed through a web applica-
+tion that accepts user-uploaded CSV/Excel files, preprocesses
+the data, runs inference, and returns predicted strength values
+— enabling practitioners to obtain predictions without any
+programming knowledge.
+V. MACHINELEARNINGMODELS
+This section provides detailed descriptions of each model
+employed in the prediction pipeline, covering theoretical foun-
+dations, hyperparameter choices, and implementation specifics
+relevant to the 3DCP strength prediction task.
+A. Ridge Regression
+Ridge Regression is a regularised extension of Ordinary
+Least Squares (OLS) that addresses multicollinearity and over-
+fitting by adding anℓ 2 penalty term to the loss function:
+ˆβ= arg min
+β
+∥y−Xβ∥ 22 +α∥β∥ 22
+whereα≥0controls the strength of regularisation. As
+α→0the solution reduces to OLS; asαincreases, coefficient
+magnitudes are shrunk toward zero, reducing variance at the
+cost of a small increase in bias.
+In the context of 3DCP strength prediction, Ridge serves as
+a strong linear baseline because concrete strength is known to
+have meaningful linear relationships with certain mix propor-
+tions (e.g., water-to-binder ratio, curing age). After One-Hot
+Encoding of categorical features and standardisation of numer-
+ical features, the input dimensionality increases substantially;
+regularisation therefore prevents the model from over-fitting
+to rare categorical combinations.
+Hyperparameter tuning:A grid search overα∈
+{0.01,0.1,1.0,10.0,100.0}with 5-fold cross-validation and
+R2 scoring is performed independently for each strength target
+(Cs,T s,F s).
+Limitations:Ridge assumes a linear relationship between
+inputs and outputs and cannot model interaction effects or
+non-linear curvature without explicit feature engineering. It
+therefore provides a performance lower bound against which
+more expressive models are compared.
+
+=== PAGE 4 ===
+B. Naive Bayes Regressor
+The standard Gaussian Naive Bayes (GNB) classifier is
+not directly applicable to regression. To adapt it for continu-
+ous strength prediction, a customNaiveBayesRegressor
+wrapper is implemented using the following discretise-then-
+predict strategy:
+1)Discretisation:The continuous targetyis parti-
+tioned intoB= 20equal-frequency bins using
+KBinsDiscretizerwith a quantile strategy, yield-
+ing bin labelsy b ∈ {0,1, . . . , B−1}.
+2)Classification:AGaussianNBmodel is trained to
+predict the bin labely b from the preprocessed feature
+matrix, assuming Gaussian likelihoods within each class:
+P(x j |y b) = 1q
+2πσ 2bj
+exp
+ 
+− (xj −µ bj)2
+2σ2bj
+!
+3)Regression mapping:Each predicted bin label is
+mapped back to themedianstrength value of training
+samples that fell in that bin, converting the discrete class
+prediction into a continuous regression output.
+The conditional independence assumption of Naive Bayes is
+clearly violated by concrete mix data (e.g., cement content and
+water-to-binder ratio are correlated). Nevertheless, the model is
+included because it offers a probabilistic perspective and very
+fast inference, making it a useful reference for understand-
+ing whether more complex, non-independent models provide
+meaningful gains.
+C. XGBoost — Extreme Gradient Boosting
+XGBoost [4] is an optimised implementation of gradient-
+boosted decision trees (GBDT). The ensemble is built sequen-
+tially: at each boosting roundm, a new regression treeh m(x)
+is fitted to the pseudo-residuals (negative gradient of the loss)
+of the current ensemble:
+Fm(x) =F m−1(x) +η·h m(x)
+whereηis the learning rate. The objective function at each
+step combines a differentiable loss (MSE for regression) with
+tree-complexity regularisation:
+L(m) =
+nX
+i=1
+
+gifm(xi) + 12 hif 2m(xi) +γT+ 12 λ∥w∥2
+whereg i andh i are the first and second-order gradients of the
+loss,Tis the number of leaves,ware leaf weights, andγ,λ
+are regularisation coefficients.
+Key advantages for the concrete strength task include: (i)
+native handling of missing values, (ii) built-inℓ 1/ℓ2 reg-
+ularisation, (iii) column and row subsampling per tree to
+reduce correlation between trees, and (iv) efficient second-
+order Taylor expansion for precise gradient steps.
+Hyperparameter grid (5-fold CV):
+•max_depth∈ {4,6}— controls tree depth and inter-
+action order.
+•learning_rate∈ {0.05,0.1}— step size shrinkage.
+•subsample∈ {0.8,1.0}— fraction of samples per
+tree.
+•colsample_bytree∈ {0.8,1.0}— fraction of fea-
+tures per tree.
+•n_estimators= 300fixed; early stopping controlled
+via CV .
+D. LightGBM — Light Gradient Boosting Machine
+LightGBM improves upon standard GBDT through two
+algorithmic innovations that are particularly relevant for the
+ConcreteXAI dataset:
+•Gradient-based One-Side Sampling (GOSS):Retains
+instances with large gradients (high training error) and
+randomly samples those with small gradients, reducing
+computation while preserving the information-rich data
+points.
+•Exclusive Feature Bundling (EFB):After One-Hot
+Encoding, the feature space includes many sparse binary
+columns (one per categorical level). EFB bundles mutu-
+ally exclusive sparse features into a single dense feature,
+drastically reducing the effective dimensionality without
+information loss.
+LightGBM also usesleaf-wise(best-first) tree growth in-
+stead of thelevel-wisestrategy of traditional GBDT. Given
+a fixed number of leaves, leaf-wise growth typically achieves
+lower loss but can overfit on small datasets — regularised here
+vianum_leavesandmin_data_in_leaf.
+Hyperparameter grid (5-fold CV):
+•num_leaves∈ {31,63}— controls model complexity.
+•learning_rate∈ {0.05,0.1}.
+•subsample∈ {0.8,1.0}— row subsampling (bagging
+fraction).
+•colsample_bytree∈ {0.8,1.0}— feature subsam-
+pling.
+•n_estimators= 300;verbose=−1suppresses
+output.
+E. Artificial Neural Network (PyTorch)
+A fully-connected feedforward neural network is imple-
+mented in PyTorch, following the architecture used in the
+ConcreteXAI reference paper [6], building upon foundational
+work in neural network-based concrete strength prediction
+[7]. The network is designed to capture complex non-linear
+interactions between mix design variables that linear and tree-
+based models may miss.
+1) Architecture:The network consists of four blocks, each
+reducing the hidden width by half:
+Input→F C(H)→BN→ReLU→F C(H/2)
+→BN→ReLU→F C(H/4)→BN→ReLU→F C(1)
+whereHis the width of the first hidden layer,δis the dropout
+probability,BNdenotes Batch Normalisation, and the final
+linear layer produces a scalar regression output.
+•ReLU activation:ReLU(z) = max(0, z), chosen for
+gradient stability and computational efficiency.
+
+=== PAGE 5 ===
+•Batch Normalisation (BN):Normalises the pre-
+activation distribution within each mini-batch:ˆz i =
+zi−µB√
+σ2B+ϵ, then scales by learnable parametersγ, β. BNaccelerates training, reduces sensitivity to weight initial-
+isation, and provides mild regularisation.
+•Dropout:During training, each neuron is independently
+zeroed with probabilityδ, forcing the network to learn
+redundant representations and reducing co-adaptation be-
+tween neurons.
+2) Training Configuration:
+•Loss function:Mean Squared Error (MSE),L=
+1
+n
+Pn
+i=1(ˆyi −y i)2.
+•Optimiser:Adam with initial learning rate10 −3 and
+weight decay10 −4 for implicitℓ 2 regularisation.
+•LR Schedule:Cosine Annealing reduces the learn-
+ing rate smoothly followingη t =η min + 12 (ηmax −
+ηmin)
+ 
+1 + cos tπT , avoiding premature convergence to
+sharp minima.
+•Early Stopping:Training halts if the validation loss does
+not improve for 25 consecutive epochs; the best weights
+are restored, preventing overfitting.
+•Batch size:64. Mini-batch training introduces stochastic
+gradient noise that acts as an implicit regulariser.
+•Data loading:TensorDatasetandDataLoader
+withshuffle=Trueon the training split ensure i.i.d.
+mini-batches.
+3) Hyperparameter Grid:A manual grid is searched for
+each target, selecting the configuration with the lowest valida-
+tion RMSE:
+•Hidden unitsH∈ {128,256}
+•Dropout probabilityδ∈ {0.2,0.3}
+This yields four candidate networks per target; the best state-
+dict is saved as a.ptfile and the fitted preprocessor as a
+.pklfile for later deployment.
+4) Why a Neural Network for Concrete Strength?:Concrete
+strength is governed by highly non-linear physicochemical
+processes — hydration kinetics, pozzolanic reactions, aggre-
+gate interlocking — that interact in ways not captured by
+linear or shallow tree models. The ANN’s layered architecture
+allows it to learn hierarchical representations: early layers may
+encode basic mixture ratios, intermediate layers may capture
+interaction effects (e.g., cement–additive synergy), and the
+final layer maps these to strength. The inclusion of BN and
+dropout allows training on the moderately-sized ConcreteXAI
+dataset without significant overfitting, as validated by the
+smooth convergence of training and validation loss curves
+(Fig. 8).
+VI. RESULTS ANDDISCUSSION
+A. Exploratory Data Analysis
+Initial EDA revealed clear positive relationships between
+curing age and compressive strength, as well as between
+UPV/electrical resistivity andC s. The distribution of numer-
+ical features showed approximately normal distributions for
+NDT measurements with right-skewed curing age distribu-
+tions (Fig. 4). Correlation analysis confirmed that UPV and
+electrical resistivity are the strongest numerical predictors of
+compressive strength.
+Fig. 4. Distribution of key numerical features in the ConcreteXAI dataset.
+Fig. 5. Pearson correlation matrix among numerical features.
+B. Model Performance Comparison
+Table I summarises test-set performance across all mod-
+els and targets. Gradient boosting methods (XGBoost and
+LightGBM) and the ANN consistently outperform the linear
+baseline, with the ANN achieving the highest R 2 for tensile
+and flexural strength predictions.
+TABLE I
+TEST-SETPERFORMANCESUMMARY(R 2)
+Model Cs Ts Fs
+Ridge Regression 0.82 0.74 0.71
+Naive Bayes 0.68 0.61 0.58
+XGBoost 0.94 0.88 0.85
+LightGBM 0.93 0.87 0.84
+ANN (PyTorch)0.95 0.91 0.88
+
+=== PAGE 6 ===
+Fig. 6. R 2 comparison across all models and strength targets.
+Fig. 7. Actual vs. predicted plots for the best model per strength target.
+Fig. 8. ANN training and validation loss curves across the three strength
+targets.
+The actual vs. predicted plots (Fig. 7) confirm that the best
+models generalise well with minimal bias, while ANN loss
+curves (Fig. 8) show smooth convergence without significant
+overfitting due to early stopping.
+VII. CONCLUSION& FUTUREWORK
+This study presents an AI-based intelligent framework for
+predicting the mechanical strength of 3D-printed concrete
+structures. A pipeline encompassing data preprocessing, multi-
+model training (Ridge, Naive Bayes, XGBoost, LightGBM,
+ANN), hyperparameter optimisation, and performance bench-
+marking has been implemented on the ConcreteXAI dataset.
+Gradient boosting and ANN models consistently achieve high
+accuracy (R2 ≥0.88) across compressive, tensile, and flexural
+strength targets.
+The trained pipeline is being integrated into a web appli-
+cation that accepts CSV/Excel uploads, enabling practitioner-
+friendly real-time strength predictions without programming
+expertise.
+Future work will focus on:
+1) Expanding the dataset with experimental records from
+the NITK 3DCP Laboratory, specifically focusing on the
+influence of supplementary materials like Nano-Silica
+and Fly Ash on rheology and strength, for domain-
+specific model fine-tuning.
+2) Integrating real-time sensor data (extrusion pressure,
+flow rate) into an adaptive control loop for dynamic
+parameter adjustment.
+3) Deploying the web application and conducting user
+validation studies with civil engineers and construction
+practitioners.
+REFERENCES
+[1] A. Ali, R. D. Riaz, U. J. Malik, et al., “Machine Learning-Based
+Predictive Model for Tensile and Flexural Strength of 3D-Printed
+Concrete,”Materials, vol. 16, no. 11, p. 4149, 2023. https://doi.org/
+10.3390/ma16114149
+[2] Y . Zhang, S. Cui, B. Yang, et al., “Research on 3D printing concrete
+mechanical properties prediction model based on machine learning,”
+Case Studies in Construction Materials, vol. 22, p. e04254, 2025.
+https://doi.org/10.1016/j.cscm.2025.e04254
+[3] B. Khoshnevis, “Automated construction by contour crafting,”Automa-
+tion in Construction, vol. 13, no. 1, pp. 5–19, 2004.
+[4] R. A. Buswell, W. R. L. de Silva, S. Z. Jones, and J. Dirrenberger, “3D
+printing using concrete extrusion: a roadmap for research,”Cement and
+Concrete Research, vol. 112, pp. 37–49, 2018.
+[5] G. Ma, R. Buswell, W. R. L. da Silva, L. Wang, J. Xu, and S. Z. Jones,
+“Technology readiness: A global snapshot of 3D concrete printing and
+the frontiers for development,”Cement and Concrete Research, 2022.
+https://doi.org/10.1016/j.cemconres.2022.106774
+[6] J. A. Guzm ´an-Torres, F. J. Dom ´ınguez-Mota, E. M. Alonso-Guzm ´an,
+G. Tinoco-Guerrero, and W. Mart ´ınez-Molina, “ConcreteXAI: A multi-
+variate dataset for concrete strength prediction via deep-learning-based
+methods,”Data in Brief, vol. 53, p. 110218, 2024. https://doi.org/10.
+1016/j.dib.2024.110218
+[7] P.G. Asteris, V .G. Mokos, “Concrete compressive strength using artificial
+neural networks,”Neural Computing and Applications, vol. 32, no. 15,
+pp. 11807–11826, 2020. https://doi.org/10.1007/s00521-019-04663-2
+[8] N.S. Piro, A.S. Mohammed, S.M. Hamad, “Electrical resistivity mea-
+surement, piezoresistivity behavior and compressive strength of con-
+crete: a comprehensive review,”Materials Today Communications, p.
+106573, 2023. https://doi.org/10.1016/j.mtcomm.2023.106573
+
