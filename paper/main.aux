@@ -1,0 +1,116 @@
+\relax 
+\citation{buswell20183d,ali2023machine}
+\citation{zhang2025research}
+\citation{aci318_19}
+\citation{eurocode2}
+\citation{astm_c39}
+\citation{astm_c496}
+\citation{astm_c78}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
+\citation{guzman2024concretexai}
+\citation{ali2023machine}
+\citation{zhang2025research}
+\citation{feng2021machine}
+\citation{caruana1997multitask}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 3D Concrete Printer at the NITK Surathkal 3DCP Laboratory.}}{2}{}\protected@file@percent }
+\newlabel{fig:printer}{{1}{2}{}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Target observation and asymmetric missingness profile across the 4,420 experimental mixes in the ConcreteXAI benchmark dataset.}}{2}{}\protected@file@percent }
+\newlabel{fig:missingness_profile}{{2}{2}{}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Machine Learning in Concrete and 3DCP}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Multi-Task Learning and Incomplete Supervision}{2}{}\protected@file@percent }
+\citation{karniadakis2021physics}
+\citation{feng2021machine}
+\citation{aci318_19}
+\citation{eurocode2}
+\citation{astm_c78}
+\citation{guzman2024concretexai}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Physics-Informed Neural Networks (PINN)}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Problem Formulation and Mechanical Constraints}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Mathematical Problem Setting}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Continuum Mechanics and Civil Engineering Code Envelopes}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}1}Splitting Tensile to Compressive Ratio ($R_t$)}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}2}Flexural to Compressive Ratio ($R_f$)}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}3}Hierarchy Between Flexural and Tensile Capacity}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Dataset Description and Exploratory Analysis}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}ConcreteXAI Benchmark Overview}{3}{}\protected@file@percent }
+\citation{he2015delving}
+\citation{hendrycks2016gelu}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Distributions and Mechanical Ratio Verification}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Proposed PIM-MTL Methodology}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Leakage-Free Preprocessing Pipeline}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Network Architecture: Shared Trunk and SafeBatchNorm1d}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-B}1}SafeBatchNorm1d Formulation}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-B}2}Task-Specific Prediction Heads}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Probability density distributions and boxplots of the continuous input features in the ConcreteXAI benchmark dataset.}}{5}{}\protected@file@percent }
+\newlabel{fig:continuous_dist}{{3}{5}{}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Frequency distribution of categorical variables across mix specimens.}}{5}{}\protected@file@percent }
+\newlabel{fig:categorical_dist}{{4}{5}{}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}Masked Multi-Task Empirical Loss ($\mathcal  {L}_{\text  {data}}$)}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-C}1}Mathematical Proof of Exact Gradient Gating}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-D}}Differentiable Physics Regularization ($\mathcal  {L}_{\text  {phys}}$)}{5}{}\protected@file@percent }
+\citation{kingma2014adam}
+\citation{loshchilov2016sgdr}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Empirical probability distributions, kernel density estimations, and summary statistics of the three mechanical target variables.}}{6}{}\protected@file@percent }
+\newlabel{fig:target_dist}{{5}{6}{}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Ground truth mechanical ratio distributions ($T_s/C_s$ and $F_s/C_s$) overlaid with ACI 318 / Eurocode 2 theoretical boundary limits.}}{6}{}\protected@file@percent }
+\newlabel{fig:ground_truth_ratios}{{6}{6}{}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Pearson correlation matrix between continuous features and target mechanical properties.}}{6}{}\protected@file@percent }
+\newlabel{fig:correlation_matrix}{{7}{6}{}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-D}1}Regularization of Unobserved Data}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Experimental Setup}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Training Protocol and Hyperparameters}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Evaluation Metrics}{6}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces End-to-end operational workflow of the proposed Physics-Informed Masked Multi-Task Learning (PIM-MTL) framework, detailing: (1) multi-property input ingestion, (2) leakage-free preprocessing with categorical encoding and binary mask generation, (3) shared representation neural network, (4) hybrid masked data and continuum physics optimization, and (5) persistent model and evaluation deliverables.}}{7}{}\protected@file@percent }
+\newlabel{fig:system_workflow}{{8}{7}{}{figure.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Results and Comparative Analysis}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Training Convergence Dynamics}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Quantitative Test Set Performance}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-C}}Cross-Architecture Benchmark and The Metric Illusion}{7}{}\protected@file@percent }
+\citation{guzman2024concretexai}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Detailed architectural schematic of the PIM-MTL deep neural network and hybrid loss optimization engine: (1) 19-dimensional input fusion, (2) 3-layer shared parameter trunk with SafeBatchNorm1d, GELU activations, and Dropout, (3) specialized linear regression heads for compressive, tensile, and flexural strengths, (4) dual-channel loss combining masked MSE gradient gating with differentiable ACI 318 continuum physics regularizers, and (5) multi-property output predictions in physical MPa units.}}{8}{}\protected@file@percent }
+\newlabel{fig:network_architecture}{{9}{8}{}{figure.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Quantitative Test Set Evaluation Metrics for PIM-MTL ($N_{\text  {test}} = 1,326$, 30\% Split)}}{8}{}\protected@file@percent }
+\newlabel{tab:results_summary}{{I}{8}{}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Parity plots ($y = x$) comparing experimental laboratory ground truth versus model predictions on the held-out 30\% test split ($N_{\text  {test}}=1,326$) across Compressive Strength ($C_s$), Splitting Tensile Strength ($T_s$), and Flexural Strength ($F_s$). Predictions from unconstrained XGBoost regression (cyan) are contrasted with the proposed PIM-MTL framework (green) against the ideal parity line (dashed black).}}{9}{}\protected@file@percent }
+\newlabel{fig:parity_plots}{{10}{9}{}{figure.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Compressive Strength ($C_s$, MPa) benchmark across all candidate models on the 30\% held-out test split: (A) Mean Squared Error (MSE), (B) Root Mean Squared Error (RMSE), and (C) Coefficient of Determination ($R^2$). Model names are wrapped to prevent overlap.}}{9}{}\protected@file@percent }
+\newlabel{fig:cs_metrics}{{11}{9}{}{figure.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-D}}Physical Feasibility and Code Feasibility Audit}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-E}}Parity and Bivariate Envelope Visualizations}{9}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Splitting Tensile Strength ($T_s$, MPa) benchmark across candidate models: (A) Mean Squared Error (MSE), (B) Root Mean Squared Error (RMSE), and (C) Coefficient of Determination ($R^2$) across $N=1,041$ observed test specimens.}}{10}{}\protected@file@percent }
+\newlabel{fig:ts_metrics}{{12}{10}{}{figure.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Flexural Strength ($F_s$, MPa) benchmark across candidate models: (A) Mean Squared Error (MSE), (B) Root Mean Squared Error (RMSE), and (C) Coefficient of Determination ($R^2$). Despite $F_s$ being observed in only 40.9\% of test mixes ($N=542$), PIM-MTL achieves $R^2 = 0.9955$ and $\text  {RMSE} = 0.1590$~MPa via multi-task representation transfer.}}{10}{}\protected@file@percent }
+\newlabel{fig:fs_metrics}{{13}{10}{}{figure.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Discussion and Engineering Significance}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-A}}Substantial Reduction in Testing Overheads}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-B}}Preventing Non-Conservative Shear Failures}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-C}}Practical Deployment and Single-Sample Inference Reliability}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Conclusion and Future Work}{10}{}\protected@file@percent }
+\bibcite{buswell20183d}{1}
+\bibcite{ali2023machine}{2}
+\bibcite{zhang2025research}{3}
+\bibcite{aci318_19}{4}
+\bibcite{eurocode2}{5}
+\bibcite{astm_c39}{6}
+\bibcite{astm_c496}{7}
+\bibcite{astm_c78}{8}
+\bibcite{guzman2024concretexai}{9}
+\bibcite{feng2021machine}{10}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Physical and building code feasibility audit across candidate architectures on the 30\% held-out test split ($N_{\text  {test}}=1,326$): (A) Severe inversion violations, contrasting physically impossible predictions ($T_s \ge C_s$) and strength hierarchy inversions ($T_s \ge F_s$); (B) ACI 318-19 continuum mechanics ratio violations for tensile ($R_t \notin  [0.06, 0.18]$) and flexural ($R_f \notin  [0.08, 0.25]$) envelopes.}}{11}{}\protected@file@percent }
+\newlabel{fig:physical_violations}{{14}{11}{}{figure.14}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Comprehensive Benchmark Comparison and ACI 318 Physical Compliance Audit on 30\% Held-Out Test Set ($N_{\text  {test}} = 1,326$)}}{11}{}\protected@file@percent }
+\newlabel{tab:baseline_comparison}{{II}{11}{}{table.2}{}}
+\@writefile{toc}{\contentsline {section}{References}{11}{}\protected@file@percent }
+\bibcite{caruana1997multitask}{11}
+\bibcite{karniadakis2021physics}{12}
+\bibcite{he2015delving}{13}
+\bibcite{hendrycks2016gelu}{14}
+\bibcite{kingma2014adam}{15}
+\bibcite{loshchilov2016sgdr}{16}
+\bibcite{paszke2019pytorch}{17}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Specimen predictions plotted against shaded ACI 318-19 admissible physical envelopes ($0.06 \le R_t \le 0.18$ and $0.08 \le R_f \le 0.25$) across the test set for unconstrained XGBoost, Single-Task ANN, and PIM-MTL. Blue dots indicate code-compliant specimens; red cross markers designate code-violating outliers, demonstrating severe structural violations by unconstrained models.}}{12}{}\protected@file@percent }
+\newlabel{fig:aci_envelopes}{{15}{12}{}{figure.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Training loss convergence across 60 epochs: Total Loss (left), Masked Data MSE (center), and Physics Penalty (right).}}{12}{}\protected@file@percent }
+\newlabel{fig:convergence}{{16}{12}{}{figure.16}{}}
+\gdef \@abspage@last{12}
