@@ -1,0 +1,10 @@
+{
+  "python_version": "3.14.3",
+  "torch_version": "2.13.0+cu130",
+  "os": "Windows-11-10.0.26300-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "gpu_count": 1,
+  "cuda_runtime_version": "13.0"
+}
