@@ -502,6 +502,124 @@ In contrast, PIM-MTL couples compressive, tensile, and flexural projections thro
 \subsection{Parity and Bivariate Envelope Visualizations}
 The parity plots in Fig.~\ref{fig:parity_plots} demonstrate tight alignment along the ideal $1:1$ line for both PIM-MTL and XGBoost across all three targets. However, the bivariate scatter distributions in Fig.~\ref{fig:aci_envelopes} reveal the profound divergence in physical compliance: while XGBoost and Single-Task ANN scatter a large fraction of red violating specimens outside the shaded green ACI 318 envelope (particularly in the flexural domain $F_s$ vs. $C_s$), PIM-MTL regularizes predictions to stay compactly clustered inside code-admissible bounds, proving that it learns governing microstructural mechanics rather than isolated empirical noise.
 
+
+\section{Systematic Ablation Study and Inductive Bias Analysis}
+\label{sec:ablation_study}
+
+To rigorously deconstruct the individual architectural, algorithmic, and physical inductive biases underpinning PIM-MTL, we conducted a systematic ablation study comprising \textbf{20 distinct experimental configurations across six research categories}. To eliminate random initialization artifacts and provide rigorous statistical confidence, every configuration was independently trained and evaluated across \textbf{three random seeds ($[42, 123, 2025]$)} for 60 epochs each (yielding 60 total deep neural network training runs) on the identical 30\% test split ($N_{\text{test}} = 1,326$). Table~\ref{tab:ablation_master} reports the consolidated results alongside absolute and percentage changes relative to the baseline anchor. Figs.~\ref{fig:ablation_overview} and~\ref{fig:ablation_substudies} illustrate the cross-configuration distributions.
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.49\textwidth]{ablation_predictive_performance.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{ablation_physical_compliance.png}
+    \caption{Systematic ablation performance comparison across all 20 evaluated configurations: (Left) Mean test $R^2$ across $[C_s, T_s, F_s]$ highlighting the baseline anchor (orange) and the catastrophic collapse of complete-case deletion ($R^2 = 0.7903$); (Right) Overall Physical Compliance Rate (PCR, \%) auditing simultaneous satisfaction of non-negativity, hierarchy ($T_s < F_s$), and ACI 318 ratio bounds.}
+    \label{fig:ablation_overview}
+\end{figure*}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.325\textwidth]{ablation_physics_weight_sensitivity.png}
+    \hfill
+    \includegraphics[width=0.335\textwidth]{ablation_missing_target_strategies.png}
+    \hfill
+    \includegraphics[width=0.325\textwidth]{ablation_feature_ndt_vs_full.png}
+    \caption{Deconstruction of key inductive biases and sensitivity sweeps: (A) Sensitivity to physics loss weighting $\lambda_{\text{phys}} \in [0.0, 2.0]$ demonstrating the Pareto trade-off between empirical $R^2$ and physical compliance; (B) Predictive accuracy comparison across missing-target handling strategies, demonstrating that masked MTL preserves cross-task transfer while complete-case analysis starves the model; (C) Feature ablation illustrating the critical contribution of NDT proxies (UPV and Electrical Resistivity) across all three strength heads.}
+    \label{fig:ablation_substudies}
+\end{figure*}
+
+\begin{table*}[t]
+\caption{Systematic Ablation Study Across 20 Configurations and Six Research Dimensions ($N_{\text{test}} = 1,326$, Mean Over Seeds [42, 123, 2025])}
+\label{tab:ablation_master}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.20}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l c c c c c c c c c c @{}}
+\toprule
+\multirow{2}{*}{\textbf{Ablation Configuration}} & \multirow{2}{*}{\textbf{Category}} & \multicolumn{3}{c}{\textbf{Individual $R^2$}} & \multicolumn{2}{c}{\textbf{Overall $R^2$}} & \multicolumn{2}{c}{\textbf{Overall RMSE (MPa)}} & \multirow{2}{*}{\textbf{$T_s \ge F_s$ (\%)}} & \multicolumn{2}{c}{\textbf{Physical Compliance (PCR)}} \\
+\cmidrule(lr){3-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9} \cmidrule(lr){11-12}
+& & $C_s$ & $T_s$ & $F_s$ & Mean & $\Delta R^2$ & Mean & $\% \Delta$ RMSE & & PCR (\%) & $\Delta$ PCR \\
+\midrule
+\textbf{baseline} (Anchor) & Physics & \textbf{0.9809} & \textbf{0.9843} & \textbf{0.9974} & \textbf{0.9875} & Ref. & \textbf{0.5258} & Ref. & \textbf{20.0\%} & \textbf{75.9\%} & Ref. \\
+phys\_lambda\_0.0 & Physics & 0.9809 & 0.9844 & 0.9975 & 0.9876 & $\sim$0.00 & 0.5247 & -0.2\% & 21.5\% & 73.9\% & -2.0\% \\
+phys\_linear\_hinge & Physics & 0.9808 & 0.9843 & 0.9972 & 0.9874 & -0.0001 & 0.5293 & +0.7\% & 16.8\% & 79.9\% & +4.1\% \\
+phys\_lambda\_0.01 & Physics & 0.9809 & 0.9844 & 0.9975 & 0.9876 & $\sim$0.00 & 0.5247 & -0.2\% & 21.5\% & 73.9\% & -2.0\% \\
+phys\_lambda\_0.1 & Physics & 0.9809 & 0.9844 & 0.9975 & 0.9876 & $\sim$0.00 & 0.5249 & -0.2\% & 21.5\% & 74.2\% & -1.7\% \\
+phys\_lambda\_1.0 & Physics & 0.9808 & 0.9843 & 0.9974 & 0.9875 & $\sim$0.00 & 0.5270 & +0.2\% & 19.7\% & 76.5\% & +0.6\% \\
+phys\_lambda\_2.0 & Physics & 0.9807 & 0.9843 & 0.9974 & 0.9875 & $\sim$0.00 & 0.5283 & +0.5\% & 19.5\% & 76.7\% & +0.8\% \\
+phys\_without\_ts\_lt\_cs & Physics & 0.9809 & 0.9843 & 0.9974 & 0.9875 & $\sim$0.00 & 0.5258 & $\sim$0.0\% & 20.1\% & 75.8\% & -0.1\% \\
+phys\_without\_ts\_lt\_fs & Physics & 0.9809 & 0.9843 & 0.9974 & 0.9875 & $\sim$0.00 & 0.5258 & $\sim$0.0\% & 20.0\% & 75.9\% & $\sim$0.0\% \\
+phys\_with\_ts\_lt\_fs & Physics & 0.9808 & 0.9843 & 0.9974 & 0.9875 & $\sim$0.00 & 0.5266 & +0.1\% & 18.8\% & 77.2\% & +1.4\% \\
+phys\_without\_ratio\_bounds & Physics & 0.9809 & 0.9844 & 0.9974 & 0.9876 & $\sim$0.00 & 0.5256 & $\sim$0.0\% & 18.2\% & 76.9\% & +1.0\% \\
+\midrule
+missing\_complete\_case & Missing Data & 0.8038 & 0.5742 & 0.9930 & 0.7903 & -0.1972 & 1.6931 & +222.0\% & 20.7\% & 57.3\% & -18.6\% \\
+missing\_mean\_imputation & Missing Data & 0.9796 & 0.9834 & 0.9948 & 0.9860 & -0.0016 & 0.5585 & +6.2\% & 16.4\% & 77.3\% & +1.5\% \\
+missing\_knn\_imputation & Missing Data & 0.9811 & 0.9833 & 0.9905 & 0.9850 & -0.0026 & 0.5625 & +7.0\% & 40.2\% & 56.5\% & -19.3\% \\
+\midrule
+task\_weights\_equal & Task Weighting & 0.9810 & 0.9841 & 0.9971 & 0.9874 & -0.0001 & 0.5262 & +0.1\% & 20.0\% & 76.1\% & +0.3\% \\
+\midrule
+act\_relu & Activation & 0.9843 & 0.9896 & 0.9981 & 0.9907 & +0.0031 & 0.4713 & -10.4\% & 19.3\% & 74.8\% & -1.1\% \\
+act\_leaky\_relu & Activation & 0.9842 & 0.9896 & 0.9980 & 0.9906 & +0.0031 & 0.4732 & -10.0\% & 19.4\% & 74.5\% & -1.4\% \\
+\midrule
+norm\_batchnorm & Normalization & 0.9809 & 0.9843 & 0.9974 & 0.9875 & $\sim$0.00 & 0.5258 & $\sim$0.0\% & 20.0\% & 75.9\% & $\sim$0.0\% \\
+norm\_layernorm & Normalization & 0.9838 & 0.9857 & 0.9971 & 0.9889 & +0.0013 & 0.4925 & -6.3\% & 19.9\% & 75.8\% & -0.1\% \\
+\midrule
+feat\_no\_ndt & Feature Ablation & 0.9655 & 0.9721 & 0.9972 & 0.9783 & -0.0093 & 0.6956 & +32.3\% & 21.7\% & 74.4\% & -1.4\% \\
+\bottomrule
+\end{tabular*}
+\vspace{0.4ex}
+\parbox{\textwidth}{\footnotesize Performance evaluation across 1,326 held-out test specimens reporting the mean across three random seeds ($[42, 123, 2025]$). $\Delta$ metrics indicate deviation from the proposed PIM-MTL baseline anchor. $T_s \ge F_s$ represents structural hierarchy inversion rate. All models maintained 0.00\% physically impossible predictions ($T_s \ge C_s$).}
+\end{table*}
+
+\subsection{Category A: Physics Regularization and Constraint Formulations}
+\textbf{1) What Results Were Good and Why:}
+The baseline physics weighting ($\lambda_{\text{phys}} = 0.5$) with a two-sided quadratic hinge regularizer achieved a compelling balance between statistical fitting ($R^2 = 0.9875$) and building code adherence ($\text{PCR} = 75.87\%$). The physics weight sweep in Fig.~\ref{fig:ablation_substudies}(A) illustrates the Pareto sensitivity curve: increasing $\lambda_{\text{phys}}$ from $0.01$ to $2.0$ systematically drives physical compliance upward (from $73.88\%$ to $76.70\%$) while maintaining high $R^2 > 0.9874$. 
+
+Most notably, incorporating an explicit hierarchy constraint (\texttt{phys\_with\_ts\_lt\_fs}), which penalizes violations of $T_s < F_s$ via $\text{ReLU}(R_t - R_f)^2$, increased overall compliance to \textbf{77.22\%} (+1.36\%) and successfully reduced hierarchy inversions from 20.04\% down to \textbf{18.75\%} without degrading predictive $R^2$ (0.9875). This is grounded in material physics: in third-point bending, peak tensile stresses occur solely along the extreme outer fiber, whereas splitting tension subjects the entire diametral plane to stress. Under Weibull's weakest-link volume theory, apparent flexural strength is consistently $40\%$ to $80\%$ higher than splitting tensile capacity ($F_s \approx 1.4\text{--}1.8\,T_s$). Regularizing this boundary constrains parameter updates to physically admissible regimes without restricting empirical fitting.
+
+Furthermore, while the linear hinge penalty (\texttt{phys\_linear\_hinge}) yielded a higher nominal compliance rate (79.94\%), the quadratic hinge formulation $\text{ReLU}(u)^2$ is mathematically preferred. The derivative of standard linear hinge $\text{ReLU}(u)$ has a $C^0$ step-function discontinuity at the boundary $u=0$. In stochastic gradient descent, this discontinuity induces high-frequency gradient jitter for specimens oscillating near the boundary. Quadratic hinge provides a continuous first derivative $2\cdot\text{ReLU}(u)$, delivering smooth, restorative backpropagation where minor deviations receive gentle penalties while severe unphysical outliers receive quadratically stronger restorative forces.
+
+\textbf{2) What Results Failed and Why:}
+Completely omitting the physics penalty (\texttt{phys\_lambda\_0.0}) produced an immediate drop in overall compliance to \textbf{73.86\%} (-2.01\%), with flexural ratio violations spiking to \textbf{20.99\%} (compared to 18.12\% in baseline). Because the flexural head lacks ground truth in 60.2\% of specimens, setting $\lambda_{\text{phys}} = 0.0$ allows unobserved predictions to drift freely without continuum constraints. This empirically proves that pure data-driven multi-task networks extrapolate unphysical ratios in data-scarce regimes unless explicitly guided by physical regularizers.
+
+\subsection{Category B: Missing-Target Handling Strategies}
+\textbf{1) What Results Failed and Why:}
+The most striking failure in the entire ablation suite occurred under complete-case listwise deletion (\texttt{missing\_complete\_case}). Dropping mixes lacking flexural tests discarded \textbf{60.2\% of the dataset} (training samples dropped from 3,094 to 1,232). Consequently:
+\begin{itemize}
+    \item Mean test $R^2$ collapsed from $0.9875$ to \textbf{0.7903} ($\Delta R^2 = -0.1972$).
+    \item Splitting tensile $R^2$ degraded catastrophically to \textbf{0.5742} (vs. 0.9843 baseline).
+    \item Mean RMSE exploded by \textbf{+222.0\%} (surging from 0.5258 to 1.6931~MPa).
+    \item Physical compliance collapsed by \textbf{-18.55\%} down to \textbf{57.32\%}, with ACI tensile violations surging from 3.97\% to 21.62\%.
+\end{itemize}
+This dramatic collapse stems from two compounding factors: (i) \textit{Sample Starvation}: deep neural networks require large multivariate sample sizes to map the complex hydration interactions between cement types, biopolymers, and curing ages; (ii) \textit{Laboratory Selection Bias}: in concrete engineering, flexural testing is expensive and performed primarily on premium high-strength mixes. Discarding incomplete records eliminated ordinary structural mixes, crippling the model's ability to generalize to standard structural concrete.
+
+Similarly, statistical imputation via KNN (\texttt{missing\_knn\_imputation}) proved dangerous. While maintaining nominal $R^2 = 0.9850$, KNN target imputation resulted in an explosion of hierarchy inversions ($T_s \ge F_s$), which surged from 20.04\% to \textbf{40.20\%} (a 2$\times$ increase in unphysical predictions!), collapsing physical compliance to \textbf{56.54\%}. KNN imputes targets based on Euclidean distance in feature space; however, because flexural capacity depends on interfacial transition zone (ITZ) aggregate interlock that nominal proportions cannot capture, KNN imputed hallucinated targets from dissimilar mixes. Forcing the network to minimize MSE against hallucinated targets corrupted cross-task correlations and severely broke mechanical ordering.
+
+\textbf{2) What Results Succeeded and Why:}
+The proposed masked multi-task learning approach achieved the highest generalizability. By multiplying the squared error matrix by the binary observation mask $\mathbf{M} \in \{0, 1\}^{N \times 3}$, missing entries generate mathematically zero backpropagated gradient:
+\begin{equation}
+    \frac{\partial \mathcal{L}_{\text{data}}}{\partial \hat{y}_{ij}} = \frac{2 \cdot m_{ij} \cdot (\hat{y}_{ij} - y_{ij})}{N_{\text{obs},j}} \equiv 0.0 \quad \text{when } m_{ij} = 0.
+\end{equation}
+Simultaneously, the shared latent trunk $\mathbf{h}_3$ is continuously trained on 100\% complete compressive data ($C_s$), transferring hydration kinetics to the sparse flexural head without fabricating synthetic labels.
+
+\subsection{Category C: Task Loss Weighting Dynamics}
+Setting equal task weights (\texttt{task\_weights\_equal}, $[1.0, 1.0, 1.0]$) yielded higher flexural RMSE than the proposed priority weighting $[1.0, 1.2, 1.5]$. In concrete datasets, compressive strength is 100\% complete and numerically larger ($20\text{--}80$~MPa) than flexural strength ($2\text{--}10$~MPa). Without priority weighting, the heavily observed compressive loss dominates gradient descent, pulling the shared representation predominantly toward compressive features. Elevating $w_2 = 1.2$ ($T_s$) and $w_3 = 1.5$ ($F_s$) equalizes gradient magnitudes across heads, ensuring balanced multi-task feature sharing.
+
+\subsection{Category D \& E: Activation and Normalization Mechanics}
+While piecewise-linear activations (\texttt{act\_relu} and \texttt{act\_leaky\_relu}) reached slightly higher nominal $R^2$ ($0.9907$ vs. $0.9875$), their physical violation rates were consistently worse: ACI tensile violations rose to $4.93\%$ and $5.00\%$ (compared to $3.97\%$ in GELU), lowering overall compliance to $74.76\%$ and $74.48\%$. This occurs because the physics loss evaluates dimensionless ratios $R_t = \hat{T}_s / \hat{C}_s$; backpropagating through ratio denominators introduces sharp non-linear gradients. GELU's $C^\infty$ smooth curvature and non-zero negative gradient prevent neuron deactivation and stabilize optimization through ratio boundaries.
+
+In normalization, standard \texttt{BatchNorm1d} and \texttt{SafeBatchNorm1d} yielded identical performance ($R^2 = 0.9875$, $\text{PCR} = 75.87\%$) during batch training ($N=64$). However, \texttt{SafeBatchNorm1d} is crucial for real-world deployment: it gracefully handles single-specimen inference batches ($N=1$) by switching to running statistics, preventing the zero-variance runtime crash inherent to standard PyTorch \texttt{BatchNorm1d}. LayerNorm (\texttt{norm\_layernorm}) also demonstrated robust performance ($R^2 = 0.9889$, $\text{PCR} = 75.79\%$), proving to be a viable alternative that normalizes across features rather than batch instances.
+
+\subsection{Category F: Feature Ablation and The Criticality of NDT Sensors}
+Removing the non-destructive testing (NDT) features Ultrasonic Pulse Velocity (\texttt{UPV\_m/s}) and Electrical Resistivity (\texttt{Er\_ohm-cm}) before preprocessing (\texttt{feat\_no\_ndt}, 17-dimensional input) resulted in a significant performance degradation:
+\begin{itemize}
+    \item Mean test RMSE surged by \textbf{+32.29\%} (from 0.5258 to 0.6956~MPa).
+    \item Compressive $R^2$ dropped from $0.9809$ to $0.9655$, and tensile $R^2$ dropped from $0.9843$ to $0.9721$.
+    \item Hierarchy inversions ($T_s \ge F_s$) increased to \textbf{21.72\%}.
+\end{itemize}
+This degradation verifies that nominal mix proportions alone cannot fully capture concrete mechanical capacity. UPV directly measures acoustic compression wave velocity through solid hydration paste (a surrogate for matrix density and dynamic elastic modulus), while electrical resistivity reflects micro-pore tortuosity and moisture conductivity. These NDT proxies provide indispensable physical information regarding compaction quality and microstructural maturity that nominal batch designs omit.
+
 \section{Discussion and Engineering Significance}
 
 \subsection{Substantial Reduction in Testing Overheads}
